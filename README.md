@@ -1,6 +1,6 @@
 # EnglishProjectTNCY
 
-**App aiming at helping user work on their English
+**App aiming at helping user work on their English**
 
 *English course, TELECOM Nancy 2016-2017*
 
