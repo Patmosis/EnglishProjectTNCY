@@ -9,7 +9,7 @@
   - ZAMBAUX Gauthier
   - DUBOIS Nicolas
 
-* **Dependances**
+* **Dependancies**
 
   - None
 
