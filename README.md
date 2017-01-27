@@ -11,11 +11,11 @@
 
 * **Dependancies**
 
-  - None
+  - JavaFX
 
 * **Build & execute:**
 
-    - None
+  - None
 
 * **Description**
 
