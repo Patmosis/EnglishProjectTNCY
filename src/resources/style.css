@@ -1,0 +1,17 @@
+.appButton {
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-background-color: #3333cc;
+    -fx-border-radius: 5;
+    -fx-font-size: 15; 
+}
+
+.appButton:hover{
+	-fx-background-color: #7070db;
+}
+
+.appButton:pressed{
+	-fx-background-color: #1f1f7a;
+}
+    
+

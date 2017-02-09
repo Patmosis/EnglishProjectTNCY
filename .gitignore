@@ -1,8 +1,11 @@
 *.class
 .project
 .classpath
+pom.xml
 
 # Package Files #
 *.jar
 
 /bin/
+/target/
+/.settings/
