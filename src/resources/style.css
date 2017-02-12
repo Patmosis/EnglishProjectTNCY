@@ -1,17 +1,31 @@
 .appButton {
-    -fx-text-fill: white;
-    -fx-padding: 10;
-    -fx-background-color: #3333cc;
-    -fx-border-radius: 5;
-    -fx-font-size: 15; 
+	-fx-text-fill: white;
+	-fx-padding: 10;
+	-fx-background-color: #3333cc;
+	-fx-border-radius: 5;
+	-fx-font-size: 15; 
 }
 
-.appButton:hover{
+.appButton:hover {
 	-fx-background-color: #7070db;
 }
 
-.appButton:pressed{
+.appButton:pressed {
 	-fx-background-color: #1f1f7a;
 }
     
+.menuButton {
+	-fx-text-fill: white;
+	-fx-padding: 10;
+	-fx-background-color: #3333cc;
+	-fx-font-size: 15; 
+}
+
+.menuButton:hover {
+	-fx-background-color: #7070db;	
+}
+
+.menuButton:pressed {
+	-fx-background-color: #1f1f7a;	
+}
 
