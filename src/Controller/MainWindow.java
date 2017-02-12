@@ -3,8 +3,6 @@ package Controller;
 
 import Model.*;
 import View.*;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -29,19 +27,19 @@ public class MainWindow {
 
         // Defines main layout and scene
         BorderPane mainLayout = new BorderPane();
-        AppButton button = new AppButton("x");  // Example button ; closes window on click
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent e) {
-                stage.close();
-            }
-        });
-        mainLayout.setCenter(button);
-        mainLayout.setTop(new Menu());
+        mainLayout.setTop(new Menu(stage));
         MainScene scene = new MainScene(mainLayout, 800, 600);
 
         // Sets style sheet and scene
         scene.getStylesheets().add(urlStyle);
 		stage.setScene(scene);
+		
+		// Only way I found to prevent resizing
+		this.stage.setMaxWidth(800);
+		this.stage.setMaxHeight(600);
+		this.stage.setMinWidth(800);
+		this.stage.setMinHeight(600);
+		
 		stage.show();
 	}
 
