@@ -31,9 +31,22 @@ public class Menu extends GridPane {
 	    // Sets closing button button properties
 	    closingButton.getStyleClass().clear();
 	    closingButton.getStyleClass().add("menuButton");
+	    
 	    closingButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
                 stage.close();
+            }
+        });
+	    
+	    language.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent e) {
+                History history = new History(new Stage());
+            }
+        });
+	    
+	    history.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent e) {
+                Language language = new Language(new Stage());
             }
         });
 	    
