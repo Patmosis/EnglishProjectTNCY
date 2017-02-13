@@ -1,9 +1,12 @@
 package Model;
 
+import View.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -13,9 +16,12 @@ public class Menu extends GridPane {
 	private Button history = new Button("History");
 	private Button closingButton = new Button(" x ");
 
-	public Menu(final Stage stage) {
+	public Menu(final BorderPane mainLayout, final Stage stage) {
 		setHgap(260);
 
+		// Sets default text on opening application
+		mainLayout.setCenter(new Label("Welcome on our app!"));
+		
 		// Sets language button properties
 	    language.setMinWidth(250);
 	    language.setAlignment(Pos.CENTER);
@@ -40,13 +46,15 @@ public class Menu extends GridPane {
 	    
 	    language.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-                History history = new History(new Stage());
+                //new History(new Stage());
+            	mainLayout.setCenter(new Language());
             }
         });
 	    
 	    history.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-                Language language = new Language(new Stage());
+                //new Language(new Stage());
+            	mainLayout.setCenter(new History());
             }
         });
 	    

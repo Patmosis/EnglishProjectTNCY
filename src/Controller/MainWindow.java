@@ -27,7 +27,7 @@ public class MainWindow {
 
         // Defines main layout and scene
         BorderPane mainLayout = new BorderPane();
-        mainLayout.setTop(new Menu(stage));
+        mainLayout.setTop(new Menu(mainLayout, stage));
         MainScene scene = new MainScene(mainLayout, 800, 600);
 
         // Sets style sheet and scene
