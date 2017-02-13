@@ -1,16 +1,23 @@
+/* Properties to apply to everything in the application */
 .mainPane {
 	-fx-background-color: #adadeb;
 	-fx-font-size: 30; 
 }
 
+
+/* Labels that are not modified by another CSS class */
 Label {
 	-fx-text-fill: #000066;
 }
 
+
+/* Main menu general properties */
 .mainMenu {
 	-fx-background-color:linear-gradient(#5b5bd7, #adadeb);
 }
 
+
+/* Application buttons' properties */
 .appButton {
 	-fx-text-fill: white;
 	-fx-padding: 10;
@@ -27,6 +34,8 @@ Label {
 	-fx-background-color: #1f1f7a;
 }
     
+    
+/* Menu buttons' properties */
 .menuButton {
 	-fx-text-fill: white;
 	-fx-padding: 10;
@@ -40,5 +49,9 @@ Label {
 
 .menuButton:pressed {
 	-fx-background-color: #1f1f7a;	
+}
+
+.menuButton:disabled {
+	-fx-background-color: #3333ff;	
 }
 

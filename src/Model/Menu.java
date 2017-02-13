@@ -9,6 +9,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+/**
+ * Main menu of the application
+ * @author gauthier
+ *
+ */
 public class Menu extends GridPane {
 	
 	private Button language = new Button("Language");
@@ -16,6 +21,8 @@ public class Menu extends GridPane {
 	private Button closingButton = new Button(" x ");
 	private BorderPane windowMainPane;
 	private Stage gameMainStage;
+	
+	private String currentTab = null;
 
 	public Menu(final BorderPane mainPane, final Stage stage) {
 		windowMainPane = mainPane;
@@ -56,25 +63,47 @@ public class Menu extends GridPane {
 	    closingButton.getStyleClass().clear();
 	    closingButton.getStyleClass().add("menuButton");
 	    
+	    // Closes window/application on click
 	    closingButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
             	gameMainStage.close();
             }
         });
 	    
+	    // Switches to the language part of the application on click
 	    language.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-                //new History(new Stage());
-            	windowMainPane.setCenter(new Language());
+                if (currentTab == null || currentTab.equals("history")) {
+                	currentTab = "language";
+                	updateTabButtons();
+                	windowMainPane.setCenter(new Language());
+                }
             }
         });
 	    
+		// Switches to the history part of the application on click
 	    history.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-                //new Language(new Stage());
-            	windowMainPane.setCenter(new History());
+            	if (currentTab == null || currentTab.equals("language")) {
+            		currentTab = "history";
+            		updateTabButtons();
+            		windowMainPane.setCenter(new History());
+            	}
             }
         });
+	}
+	
+	/**
+	 * Updates menu buttons (set enabled/disabled)	
+	 */
+	private void updateTabButtons() {
+		if (currentTab == null || currentTab.equals("history")) {
+			history.setDisable(true);
+			language.setDisable(false);
+		} else if (currentTab == null || currentTab.equals("language")) {
+			language.setDisable(true);
+			history.setDisable(false);
+		}
 	}
 	
 }

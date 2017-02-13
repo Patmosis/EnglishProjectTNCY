@@ -2,6 +2,11 @@ package View;
 
 import javafx.scene.control.Button;
 
+/**
+ * Application buttons
+ * @author gauthier
+ *
+ */
 public class AppButton extends Button {
 
 	public AppButton() {

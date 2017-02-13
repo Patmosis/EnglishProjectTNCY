@@ -19,13 +19,8 @@ public class MainWindow {
 	private Stage stage;
 	
 	public MainWindow(Stage s, String urlStyle) {
-		// Defines stage
         this.stage = s;
-        this.stage.setTitle("English Project App");
         
-        // Suppresses window's borders
-        this.stage.initStyle(StageStyle.UNDECORATED);
-
         // Defines main layout and scene
         BorderPane mainPane = new BorderPane();
         mainPane.setTop(new Menu(mainPane, stage));
@@ -38,11 +33,7 @@ public class MainWindow {
         scene.getStylesheets().add(urlStyle);
 		stage.setScene(scene);
 		
-		// Only way I found to prevent resizing
-		this.stage.setMaxWidth(800);
-		this.stage.setMaxHeight(600);
-		this.stage.setMinWidth(800);
-		this.stage.setMinHeight(600);
+		setStageStyle();
 		
 		stage.show();
 	}
@@ -53,6 +44,23 @@ public class MainWindow {
      */
     public Stage getStage() {
         return stage;
+    }
+    
+    /**
+     * Sets application stage style
+     */
+    private void setStageStyle() {
+    	// Sets stage title (useless as we then suppress borders)
+    	this.stage.setTitle("English Project App");
+        
+        // Suppresses window's borders
+        this.stage.initStyle(StageStyle.UNDECORATED);
+    	
+    	// Only way I found to prevent resizing
+    	this.stage.setMaxWidth(800);
+    	this.stage.setMaxHeight(600);
+    	this.stage.setMinWidth(800);
+    	this.stage.setMinHeight(600);
     }
 	
 }

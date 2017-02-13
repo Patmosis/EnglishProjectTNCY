@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 public class App extends Application {
 	
 	public static void main(String[] args) {
-		// Launches the application:
+		// Launches the application
 		launch(args);
 	}
 		
@@ -22,7 +22,10 @@ public class App extends Application {
 	 */
 	@Override
     public void start(Stage stage) throws IOException {
+		// Loads CSS properties
 		String url = App.class.getResource("resources/style.css").toExternalForm();
+		
+		// Creates main window
 		new MainWindow(stage, url);
     }
 		

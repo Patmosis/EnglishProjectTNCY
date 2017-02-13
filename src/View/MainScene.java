@@ -12,7 +12,6 @@ public class MainScene extends Scene {
 
 	public MainScene(Parent parent, int width, int height) {
 		super(parent, width, height);
-		
 	}
 
 }
