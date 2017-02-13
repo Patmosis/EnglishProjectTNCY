@@ -1,3 +1,16 @@
+.mainPane {
+	-fx-background-color: #adadeb;
+	-fx-font-size: 30; 
+}
+
+Label {
+	-fx-text-fill: #000066;
+}
+
+.mainMenu {
+	-fx-background-color:linear-gradient(#5b5bd7, #adadeb);
+}
+
 .appButton {
 	-fx-text-fill: white;
 	-fx-padding: 10;
