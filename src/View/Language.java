@@ -1,5 +1,6 @@
 package View;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 
@@ -19,7 +20,7 @@ public class Language extends BorderPane {
 	 */
 	private void initialize() {
 		// TODO Create language pane
-		setCenter(new Label("Language"));
+		setTop(new Label("How English is English?"));
 	}
 	
 }
