@@ -26,7 +26,7 @@ public class MainWindow {
         mainPane.setTop(new Menu(mainPane, stage));
         mainPane.getStyleClass().add("mainPane");
         // Sets default text on opening application
-        mainPane.setCenter(new Label("Welcome on our app!"));
+        mainPane.setCenter(new Label("Welcome to our app!"));
         MainScene scene = new MainScene(mainPane, 800, 600);
 
         // Sets style sheet and scene
@@ -39,7 +39,7 @@ public class MainWindow {
 	}
 
     /**
-     * Returns the main stage.
+     * Return the main stage.
      * @return stage
      */
     public Stage getStage() {
@@ -47,7 +47,7 @@ public class MainWindow {
     }
     
     /**
-     * Sets application stage style
+     * Set application stage style
      */
     private void setStageStyle() {
     	// Sets stage title (useless as we then suppress borders)

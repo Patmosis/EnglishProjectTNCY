@@ -94,7 +94,7 @@ public class Menu extends GridPane {
 	}
 	
 	/**
-	 * Updates menu buttons (set enabled/disabled)	
+	 * Update menu buttons (set enabled/disabled)	
 	 */
 	private void updateTabButtons() {
 		if (currentTab == null || currentTab.equals("history")) {

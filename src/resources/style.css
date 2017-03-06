@@ -17,7 +17,7 @@ Label {
 }
 
 
-/* Application buttons' properties */
+/* Application buttons' properties - NOT YET USED */
 .appButton {
 	-fx-text-fill: white;
 	-fx-padding: 10;
@@ -53,5 +53,37 @@ Label {
 
 .menuButton:disabled {
 	-fx-background-color: #3333ff;	
+}
+
+
+/* Pane title properties */
+.paneTitle {
+	/*-fx-background-color: #3366ff;*/	
+	-fx-font-size: 35; 
+}
+
+/* Language pane */
+.languagePane {
+	-fx-background-image: url('images/worldmap.jpg');	
+	-fx-background-repeat: no-repeat;
+	-fx-width: 804;
+	-fx-height: 425;
+}
+
+/* Map buttons */
+.mapButton {
+	-fx-text-fill: #3333cc;
+	-fx-padding: 10;
+	-fx-background-color: transparent;
+	-fx-font-size: 15; 
+	-fx-font-weight: bold; 
+}
+
+.mapButton:hover {
+	-fx-text-fill: #1f1f7a;
+}
+
+.mapButton:pressed {
+	-fx-text-fill: blue;
 }
 
