@@ -87,3 +87,22 @@ Label {
 	-fx-text-fill: blue;
 }
 
+/* Back buttons */
+.backButton {
+	-fx-text-fill: #3333cc;
+	-fx-padding: 0 10 0 10;
+	-fx-background-color: transparent;
+	-fx-font-size: 30; 
+	-fx-font-weight: bold; 
+}
+
+.backButton:hover {
+	-fx-text-fill: #1f1f7a;
+}
+
+.backButton:pressed {
+	-fx-text-fill: blue;
+}
+
+
+
