@@ -4,6 +4,7 @@ import Model.Data;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -32,6 +33,7 @@ public class Language extends BorderPane {
 	 * Initialize language pane with the world map
 	 */
 	private void initialize() {
+		this.setBottom(null);
 		// Set tab title
 		titlePane = new GridPane();
 		title.setText("     How English is English?");
@@ -78,107 +80,6 @@ public class Language extends BorderPane {
 	}
 	
 	/**
-	 * Switch to the USA view
-	 */
-	private void usa() {
-		// Create button to go back to main menu of the view
-		Button back = new Button("🢀");
-		back.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent e) {
-            	initialize();
-            }
-        });
-		back.getStyleClass().add("backButton");
-		titlePane.add(back, 0, 0);
-		
-		// Set view title
-		title.setText(" The United States of America");
-		WordView usaPane = new WordView(data,"us");
-		this.setCenter(usaPane);
-		
-	}
-	
-	/**
-	 * Switch to the UK view
-	 */
-	private void uk() {
-		// Create button to go back to main menu of the view
-		Button back = new Button("🢀");
-		back.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent e) {
-            	initialize();
-            }
-        });
-		back.getStyleClass().add("backButton");
-		titlePane.add(back, 0, 0);
-		
-		// Set view title
-		title.setText(" The United Kingdom");
-		WordView ukPane = new WordView(data,"gb");
-		this.setCenter(ukPane);
-	}
-	
-	/**
-	 * Switch to the India view
-	 */
-	private void india() {
-		// Create button to go back to main menu of the view
-		Button back = new Button("🢀");
-		back.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent e) {
-            	initialize();
-            }
-        });
-		back.getStyleClass().add("backButton");
-		titlePane.add(back, 0, 0);
-		
-		// Set view title
-		title.setText(" India");
-		WordView indiaPane = new WordView(data,"in");
-		this.setCenter(indiaPane);
-	}
-	
-	/**
-	 * Switch to the South Africa view
-	 */
-	private void southAfrica() {
-		// Create button to go back to main menu of the view
-		Button back = new Button("🢀");
-		back.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent e) {
-            	initialize();
-            }
-        });
-		back.getStyleClass().add("backButton");
-		titlePane.add(back, 0, 0);
-		
-		// Set view title
-		title.setText(" South Africa");
-		WordView southAfricaPane = new WordView(data,"za");
-		this.setCenter(southAfricaPane);
-	}
-	
-	/**
-	 * Switch to the Australia view
-	 */
-	private void australia() {
-		// Create button to go back to main menu of the view
-		Button back = new Button("🢀");
-		back.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent e) {
-            	initialize();
-            }
-        });
-		back.getStyleClass().add("backButton");
-		titlePane.add(back, 0, 0);
-		
-		// Set view title
-		title.setText(" Australia");
-		WordView australiaPane = new WordView(data,"au");
-		this.setCenter(australiaPane);
-	}
-	
-	/**
 	 * Create a clickable area for the world map
 	 * @param string to be printed, number of the method to be called when area is clicked
 	 */
@@ -187,26 +88,64 @@ public class Language extends BorderPane {
 		button.getStyleClass().add("mapButton");
 		button.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-            	switch (functionToBeCalled) {
-            		case 1:
-            			usa();
-            			break;
-            		case 2:
-            			uk();
-            			break;
-            		case 3:
-            			india();
-            			break;
-            		case 4:
-            			southAfrica();
-            			break;
-            		case 5:
-            			australia();
-            			break;
-            	}
+            	createCountryView(functionToBeCalled);
             }
         });
 		return button;
+	}
+	
+	public void createCountryView(int countryId) {
+		// Create button to go back to main menu of the view
+		Button back = new Button("🢀");
+		back.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent e) {
+            	initialize();
+            }
+        });
+		back.getStyleClass().add("backButton");
+		titlePane.add(back, 0, 0);
+		
+		
+		String newTitle = null;
+		String newCountry = null;
+    	switch (countryId) {
+    		case 1:
+    			newTitle = " The United States of America";
+    			newCountry = "us";
+    			break;
+    		case 2:
+    			newTitle = " The United Kingdom";
+    			newCountry = "gb";
+    			break;
+    		case 3:
+    			newTitle = " India";
+    			newCountry = "in";
+    			break;
+    		case 4:
+    			newTitle = " South Africa";
+    			newCountry = "za";
+    			break;
+    		case 5:
+    			newTitle = " Australia";
+    			newCountry = "au";
+    			break;
+    	}
+    	title.setText(newTitle);
+    	final WordView countryPane = new WordView(data,newCountry);
+    	this.setCenter(countryPane);
+    	
+    	// Get next randomly chosen word
+    	Button nextButton = new Button("Next");
+    	nextButton.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent e) {
+            	countryPane.nextWord();
+            }
+        });
+    	nextButton.getStyleClass().add("appButton");
+    	StackPane bottomStack = new StackPane();
+    	bottomStack.setAlignment(Pos.CENTER);
+    	bottomStack.getChildren().add(nextButton);
+    	this.setBottom(bottomStack);
 	}
 	
 }

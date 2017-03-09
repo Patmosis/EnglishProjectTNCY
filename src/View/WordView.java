@@ -25,6 +25,7 @@ public class WordView extends BorderPane {
 	private Label meaning;
 	private VBox vbox;
 	private HBox hbox;
+	private int previousRandomNumber = -1;
 
 	
 	public WordView(Data data, String country) {
@@ -32,7 +33,23 @@ public class WordView extends BorderPane {
 	    this.setPadding(new Insets(0, 10, 0, 10));
 		words = data.get(country);
 		
-		final int randomNumber = (int) (Math.random()*words.size());
+		this.nextWord();
+	    
+	}
+	
+	public void showAnswer() {
+		vbox.getChildren().clear();
+		vbox.getChildren().add(hbox);
+		vbox.getChildren().add(meaning);
+	}
+	
+	public void nextWord() {
+		int number = 0;
+		while (previousRandomNumber == -1 || previousRandomNumber == (number = (int) (Math.random()*words.size()))) {
+			previousRandomNumber = number;
+		}
+		previousRandomNumber = number;
+		final int randomNumber = number;
 		
 		hbox = new HBox();
 		vbox = new VBox();
@@ -43,12 +60,12 @@ public class WordView extends BorderPane {
 	    word = new Label(words.get(randomNumber).get(0));
 	    hbox.getChildren().add(word);
 	    
-	    Button play = new Button("Play");
+	    Button play = new Button("▶");
 	    play.getStyleClass().add("appButton");
 	    play.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
             	try {
-        	        FileInputStream fis = new FileInputStream("src/resources/" + words.get(randomNumber).get(2));
+        	        FileInputStream fis = new FileInputStream("src/resources/audio/" + words.get(randomNumber).get(0) + ".mp3");
         	        Player playMP3 = new Player(fis);
 
         	        playMP3.play();
@@ -62,7 +79,7 @@ public class WordView extends BorderPane {
 	    vbox.getChildren().add(hbox);
 	    GridPane.setValignment(word, VPos.CENTER);
 	    
-	    meaning = new Label(words.get(randomNumber).get(3));
+	    meaning = new Label(words.get(randomNumber).get(2));
 
 	    Button showMeaning = new Button("Show meaning");
 	    showMeaning.getStyleClass().add("appButton");
@@ -74,14 +91,6 @@ public class WordView extends BorderPane {
 	    vbox.getChildren().add(showMeaning);
 	    
 	    this.setCenter(vbox);
-
-	    
-	}
-	
-	public void showAnswer() {
-		vbox.getChildren().clear();
-		vbox.getChildren().add(hbox);
-		vbox.getChildren().add(meaning);
 	}
 	
 }
