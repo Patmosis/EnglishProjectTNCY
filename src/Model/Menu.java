@@ -29,7 +29,7 @@ public class Menu extends GridPane {
 		gameMainStage = stage;
 		
 		// Sets horizontal gap between parts of the menu
-		setHgap(260);
+		setHgap(360);//260
 		getStyleClass().add("mainMenu");
 		
 		// Initializes class attributes
@@ -48,13 +48,13 @@ public class Menu extends GridPane {
 	
 	private void initializeAttributes() {		
 		// Sets language button properties
-	    language.setMinWidth(250);
+	    language.setMinWidth(200);//250
 	    language.setAlignment(Pos.CENTER);
 	    language.getStyleClass().clear();
 	    language.getStyleClass().add("menuButton");
 	    
 	    // Sets history button properties
-	    history.setMinWidth(250);
+	    history.setMinWidth(200);//250
 	    history.setAlignment(Pos.CENTER);
 	    history.getStyleClass().clear();
 	    history.getStyleClass().add("menuButton");

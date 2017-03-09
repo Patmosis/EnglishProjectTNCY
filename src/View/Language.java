@@ -1,5 +1,6 @@
 package View;
 
+import Model.Data;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -20,8 +21,10 @@ public class Language extends BorderPane {
 	
 	GridPane titlePane;
 	Label title = new Label();
+	private Data data;
 	
 	public Language() {
+		data = new Data();
 		initialize();
 	}
 	
@@ -90,8 +93,9 @@ public class Language extends BorderPane {
 		
 		// Set view title
 		title.setText(" The United States of America");
-		BorderPane usaPane = new BorderPane();
+		WordView usaPane = new WordView(data,"us");
 		this.setCenter(usaPane);
+		
 	}
 	
 	/**
@@ -110,7 +114,7 @@ public class Language extends BorderPane {
 		
 		// Set view title
 		title.setText(" The United Kingdom");
-		BorderPane ukPane = new BorderPane();
+		WordView ukPane = new WordView(data,"gb");
 		this.setCenter(ukPane);
 	}
 	
@@ -130,7 +134,7 @@ public class Language extends BorderPane {
 		
 		// Set view title
 		title.setText(" India");
-		BorderPane indiaPane = new BorderPane();
+		WordView indiaPane = new WordView(data,"in");
 		this.setCenter(indiaPane);
 	}
 	
@@ -150,7 +154,7 @@ public class Language extends BorderPane {
 		
 		// Set view title
 		title.setText(" South Africa");
-		BorderPane southAfricaPane = new BorderPane();
+		WordView southAfricaPane = new WordView(data,"za");
 		this.setCenter(southAfricaPane);
 	}
 	
@@ -170,7 +174,7 @@ public class Language extends BorderPane {
 		
 		// Set view title
 		title.setText(" Australia");
-		BorderPane australiaPane = new BorderPane();
+		WordView australiaPane = new WordView(data,"au");
 		this.setCenter(australiaPane);
 	}
 	
