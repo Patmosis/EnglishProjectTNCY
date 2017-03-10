@@ -7,6 +7,7 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
 
@@ -33,22 +34,26 @@ public class History extends BorderPane {
 		
 		VBox contenu = new VBox();
 		Label title = new Label("titre de la 'diapo'");
-		BorderPane change = new BorderPane();
+		StackPane change = new StackPane();
 		
 		if(numPage >= 0) {
-			Image fg = new Image("resources/Images/flechegauche.jpg");
-			ImageView flecheG = new ImageView(fg);
-			Button prev = new Button();
-			prev.setGraphic(flecheG);
-			change.setLeft(prev);
+			/*Image fg = new Image("resources/Images/flechegauche.jpg");
+			ImageView flecheG = new ImageView(fg);*/
+			Button prev = new Button("🢀");
+			prev.getStyleClass().add("backButton");
+			/*prev.setGraphic(flecheG);*/
+			change.getChildren().add(prev);
+			StackPane.setAlignment(prev, Pos.BOTTOM_LEFT);
 		}
 		
 		if(numPage < nbPages) {
-			Image fd = new Image("resources/Images/flechedroite.jpg");
-			ImageView flecheD = new ImageView(fd);
-			Button next = new Button();
-			next.setGraphic(flecheD);
-			change.setRight(next);
+			/*Image fd = new Image("resources/Images/flechedroite.jpg");
+			ImageView flecheD = new ImageView(fd);*/
+			Button next = new Button("next");
+			next.getStyleClass().add("backButton");
+			/*next.setGraphic(flecheD);*/
+			change.getChildren().add(next);
+			StackPane.setAlignment(next, Pos.BOTTOM_RIGHT);
 		}
 		
 		title.setMaxWidth(Double.MAX_VALUE);
