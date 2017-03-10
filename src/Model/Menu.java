@@ -87,7 +87,7 @@ public class Menu extends GridPane {
             	if (currentTab == null || currentTab.equals("language")) {
             		currentTab = "history";
             		updateTabButtons();
-            		windowMainPane.setCenter(new History());
+            		windowMainPane.setCenter(new History(0));
             	}
             }
         });

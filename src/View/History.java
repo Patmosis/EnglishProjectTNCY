@@ -1,7 +1,14 @@
 package View;
 
+import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.TextAlignment;
 
 /**
  * Main pane of the history part of the application
@@ -10,16 +17,47 @@ import javafx.scene.layout.BorderPane;
  */
 public class History extends BorderPane {
 	
-	public History() {
+	private static int nbPages = 15;
+	private int numPage;
+	
+	public History(int num) {
+		numPage = num;
 		initialize();
 	}
 	
 	/**
 	 * Initializes history pane
-	 */
+	 **/
+	
 	private void initialize() {
-		// TODO Create history pane
-		setCenter(new Label("History"));
+		
+		VBox contenu = new VBox();
+		Label title = new Label("titre de la 'diapo'");
+		BorderPane change = new BorderPane();
+		
+		if(numPage >= 0) {
+			Image fg = new Image("resources/Images/flechegauche.jpg");
+			ImageView flecheG = new ImageView(fg);
+			Button prev = new Button();
+			prev.setGraphic(flecheG);
+			change.setLeft(prev);
+		}
+		
+		if(numPage < nbPages) {
+			Image fd = new Image("resources/Images/flechedroite.jpg");
+			ImageView flecheD = new ImageView(fd);
+			Button next = new Button();
+			next.setGraphic(flecheD);
+			change.setRight(next);
+		}
+		
+		title.setMaxWidth(Double.MAX_VALUE);
+		title.setAlignment(Pos.CENTER);
+		
+		setBottom(change);
+		setTop(title);
+		setCenter(contenu);
+		
 	}
 	
 }
