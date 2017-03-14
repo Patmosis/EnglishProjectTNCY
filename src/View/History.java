@@ -13,12 +13,6 @@ public class History extends BorderPane {
 	
 	private static int nbPages = 15;
 	private int numPage = 0;
-	private Label title = new Label();
-	private VBox content = new VBox();
-	private StackPane change = new StackPane();
-	private Button prev = new Button("🢀");
-	private Button next = new Button("🢂");
-	/*private Button start;*/
 	
 	
 	public History(int numPage) {
@@ -27,6 +21,14 @@ public class History extends BorderPane {
 	
 	
 	public void initialize() {
+		
+		Label title = new Label();
+		VBox content = new VBox();
+		StackPane change = new StackPane();
+		Button prev = new Button("previous\n🢀");
+		Button next = new Button("next\n    🢂");
+		Button start = new Button("start");
+		
 		getChildren().removeAll();
 		
 		prev.getStyleClass().add("backButton");
@@ -49,7 +51,6 @@ public class History extends BorderPane {
 		
 		if(numPage == 0) {
 			
-			Button start = new Button("start");
 			start.getStyleClass().add("startButton");
 			
 			start.setOnAction(new EventHandler<ActionEvent>() {
