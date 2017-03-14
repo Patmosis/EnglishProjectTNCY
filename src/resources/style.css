@@ -120,3 +120,7 @@ Label {
 .startButton:hover {
 	-fx-text-fill: #1f1f7a;
 }
+
+.startButton:pressed {
+	-fx-text-fill: blue;
+}
