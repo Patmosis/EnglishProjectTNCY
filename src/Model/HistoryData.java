@@ -10,4 +10,7 @@ class HistoryData {
 	private String fileName = "src/resources/historydatabase.csv";
 	private ArrayList<ArrayList<String>> wordList = new ArrayList<ArrayList<String>>();
 	
+	public HistoryData() {
+	}
+	
 }
