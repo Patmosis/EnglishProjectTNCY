@@ -49,7 +49,7 @@ public class History extends BorderPane {
 		if(numPage < nbPages) {
 			/*Image fd = new Image("resources/Images/flechedroite.jpg");
 			ImageView flecheD = new ImageView(fd);*/
-			Button next = new Button("next");
+			Button next = new Button("🢂");
 			next.getStyleClass().add("backButton");
 			/*next.setGraphic(flecheD);*/
 			change.getChildren().add(next);
