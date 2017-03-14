@@ -62,6 +62,11 @@ Label {
 	-fx-font-size: 35; 
 }
 
+/* History title properties */
+.historyTitle {
+	-fx-font-size: 30;
+}
+
 /* Language pane */
 .languagePane {
 	-fx-background-image: url('images/worldmap.jpg');	
@@ -104,5 +109,14 @@ Label {
 	-fx-text-fill: blue;
 }
 
+.startButton {
+	-fx-text-fill: #3333cc;
+	-fx-padding: 10;
+	-fx-background-color: transparent;
+	-fx-font-size: 25; 
+	-fx-font-weight: bold; 
+}
 
-
+.startButton:hover {
+	-fx-text-fill: #1f1f7a;
+}
