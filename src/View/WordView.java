@@ -65,7 +65,7 @@ public class WordView extends BorderPane {
 	    play.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
             	try {
-        	        FileInputStream fis = new FileInputStream("src/resources/audio/" + words.get(randomNumber).get(0) + ".mp3");
+        	        FileInputStream fis = new FileInputStream("src/resources/audio/" + words.get(randomNumber).get(3) + ".mp3");
         	        Player playMP3 = new Player(fis);
 
         	        playMP3.play();

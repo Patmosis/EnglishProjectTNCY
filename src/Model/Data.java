@@ -22,7 +22,7 @@ public class Data {
 			while ((line = bufferedReader.readLine()) != null) {
 				ArrayList<String> word = new ArrayList<String>();
 				int i;
-				while ((i = line.indexOf(",")) != -1) {
+				while ((i = line.indexOf(";")) != -1) {
 					word.add(line.substring(0, i));
 					line = line.substring(i+1);
 				}

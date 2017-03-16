@@ -1,103 +1,181 @@
-abergine,gb,purple egg-shaped fruit eaten as a vegetable
-courgette,gb,kind of squash
-eggplant,us,purple egg-shaped fruit eaten as a vegetable
-zucchini,us,kind of squash
-aluminum,us,a light silvery-grey metal
-crisps,gb,a thin slice of potatoe fried or baked until crisp
-soccer,us,football
-vacation,us,holiday
-maize,gb,corn
-mobile phone,gb,cell phone
-motorway,gb,a road designed for fast traffic
-highway,us,a road designed for fast traffic
-pavement,gb,a path for pedestrians at the side of a road
-sidewalk,us,a path for pedestrians at the side of a road
-petrol,gb,fuel used in internal combustion engines
-sweet,gb,a small piece of confectionery made with sugar
-candy,us,a small piece of confectionery made with sugar
-trolley,gb,shopping cart
-ace,au,excellent or great
-amber fluid,au,beer
-Aussie,au,Australian
-barbie,au,barbecue
-bathers,au,swimming costume
-bloke,au,man or guy
-bogan,au,person who takes little pride in his appearance
-Izit?,za,Is that so?
-loskop,za,loose head
-lekker,za,good
-babelaas,za,hangover
-jol,za,party
-muti,za,medication
-robot,za,trafic light
-brinjal,in,purple egg-shaped fruit eaten as a vegetable
-to pass out,in,to graduate
-foreign-returned,in,returned to India after living in a foreign country
-convent-educated,in,studied in a school that uses English
-to be sitting on smbdy’s head,in,to stress out smbdy
-to eat smbdy’s brain,in,not to stop talking
-Sho?,za,Is that so?
-boozer,au,a pub
-brekkie,au,breakfast
-cactus,au,dead or not functioning
-chewie,au,chewing gum
-chokkie,au,chocolate
-chook,au,a chicken
-chrissie,au,Christmas
-click,au,kilometer
-cobber,au,friend
-cockie,au,farmer
-coldie,au,a beer
-cozzie,au,swimming costume
-cranky,au,in a bad mood or angry
-to cream,au,to defeat by a large margin
-dag,au,a funny person or a nerd
-daks,au,trousers
-digger,au,soldier
-dipstick,au,a loser or an idiot
-cunning as a dunny rat,au,very cunning
-durry,au,"tobacco, cigarette"
-exy,au,expensive
-off one’s face,au,drunk
-to fossick,au,to search
-G’day!,au,hello
-give it a burl,au,try it or have a go
-gobsmacked,au,surprised or astounded
-good oil,au,useful information or a good idea
-grouse,au,great or terrific
-heaps,au,a lot
-to have kangaroos loose in the top paddock,au,to be intellectually inadequate
-kindie,au,kindergarten
-to knock,au,to criticise
-lollies,au,sweets or candies
-mate,au,buddy or friend
-mozzie,au,mosquito
-No-hoper,au,somebody who’ll never do well
-not the full quid,au,not bright intellectually
-in the nuddy,au,naked
-oldies,au,parents
-Pig’s arse!,au,I don’t agree with you
-polly,au,politician
-Rack off!,au,Get out of here! Push off!
-rage,au,party
-Reckon!,au,You bet!
-rellie,au,family relative
-spunk,au,a good-looking person (of either sex)
-to feel stuffed,au,to be tired
-to sunbake,au,to sunbathe
-sunnies,au,sunglasses
-to veg out,au,to relax in front of the TV
-vejjo,au,vegetarian
-He’s got the Wobbly boot on,au,He’s drunk
-wog,au,flu or trivial illness
-to yabber,au,to talk a lot
-monkey’s wedding,za,simultaneous rain and sunshine
-cubbyhole,za,glove compartment in a car
-braai,za,a period of fasting
-kombi,za,a minibus
-geyser,za,a hot-water storage tank
-bakkie,za,a light pickup truck
-sarmie,za,sandwich
-oke,za,man
-lank,za,numerous or plentiful
-takkies,za,Rubber-soled sports shoes
+aubergine;gb;purple egg-shaped fruit eaten as a vegetable;aubergine;Aubergine is the main ingredient of many Indian dishes.
+courgette;gb;kind of squash;courgette;Kids are usually not very fond of courgettes.
+eggplant;us;purple egg-shaped fruit eaten as a vegetable;eggplant;Eggplant is the main ingredient of many Indian dishes.
+zucchini;us;kind of squash;zucchini;Kids are usually not very fond of zucchinis.
+aluminum;us;a light silvery-grey metal;aluminum;It is well suited for engines with aluminum cooling system components.
+crisps;gb;a thin slice of potatoe fried or baked until crisp;crisps;Crisps production is a determining factor of growth in demand for potatoes.
+soccer;us;football;soccer;You are very good at sitting on the bleachers and watching a soccer game.
+vacation;us;holiday;vacation;He goes on vacation to spain every summer.
+maize;gb;corn;maize;The variaties concerned are wheat, baley and maize.
+mobile phone;gb;cell phone;mobile phone;There are plenty of options to customise a mobile phone.
+motorway;gb;a road designed for fast traffic;motorway;If you are currently driving on a motorway, the alternative route will begin at the next exit.
+highway;us;a road designed for fast traffic;highway;If you are currently driving on a highway, the alternative route will begin at the next exit.
+pavement;gb;a path for pedestrians at the side of a road;pavement;People stood on the pavement to watch the parade.
+sidewalk;us;a path for pedestrians at the side of a road;sidewalk;People stood on the sidewalk to watch the parade.
+petrol;gb;fuel used in internal combustion engines;petrol;My small car does not consume much petrol.
+sweet;gb;a small piece of confectionery made with sugar;sweet;Children love eating sweets.
+candy;us;a small piece of confectionery made with sugar;candy;Children love eating candies.
+trolley;gb;shopping cart;trolley;I left the store with a trolley full of item.
+ace;au;excellent or great;ace;That’s ace, mate!
+amber fluid;au;beer;amber fluid;They do not sell amber fluid here.
+Aussie;au;Australian;aussie;I’m quite proud to be Aussie.
+barbie;au;barbecue;barbie;In Autralia, you can use your barbie year-round.
+bathers;au;swimming costume;bathers;Don’t tell me you’ve forgotten you bathers again.
+bloke;au;man or guy;bloke;Come on, bloke! It’ll be fun!
+bogan;au;person who takes little pride in his appearance;bogan;This guy is a total bogan.
+Izit?;za;Is that so?;izit;
+loskop;za;loose head;loskop;
+lekker;za;good;lekker;
+babelaas;za;hangover;babelaas;
+jol;za;party;jol;
+muti;za;medication;muti;
+robot;za;trafic light;robot;
+brinjal;in;purple egg-shaped fruit eaten as a vegetable;brinjal;Brinjal is the main ingredient of many Indian dishes.
+to pass out;in;to graduate;to pass out;
+foreign-returned;in;returned to India after living in a foreign country;foreign-returned;
+convent-educated;in;studied in a school that uses English;convent-educated;
+to be sitting on smbdy’s head;in;to stress out smbdy;to be sitting on smbdy’s head;
+to eat smbdy’s brain;in;not to stop talking;to eat smbdy’s brain;
+Sho?;za;Is that so?;sho;
+boozer;au;a pub;boozer;I was told there is a nice boozer down the street.
+brekkie;au;breakfast;brekkie;I had eggs and tomato on toast for brekkie today.
+cactus;au;dead or not functioning;cactus;My laptop is totally cactus, mate.
+chewie;au;chewing gum;chewie;They had no chewie left at the store.
+chokkie;au;chocolate;chokkie;This candy shop is heaven for a chokkie freak like me!
+chook;au;chicken, also used as a nice insult;chook;You bloody chook!
+Chrissie;au;Christmas;chrissie;What did you get for Chrissie?
+click;au;kilometer;click;The nearest store is three clicks away.
+cobber;au;friend;cobber;G’day, cobber!
+cockie;au;farmer;cockie;Most cockies lose money on farming but gain money on government subsidies.
+coldie;au;a beer;coldie;Let’s grab a coldie together tonight.
+cozzie;au;swimming costume;cozzie;Have you brought your cozzie?
+cranky;au;in a bad mood or angry;cranky;She is feeling a bit cranky today, isn’t she?
+dag;au;a funny person or a nerd;dag;I’m a bit of a dag today. Look at what I’m wearing.
+daks;au;trousers;daks;I always make sure I have a pressed pair of daks for the first day back after the holidays
+digger;au;soldier;digger;Those Aussie diggers are tough in combat.
+cunning as a dunny rat;au;very cunning;cunning as a dunny rat;That guy is cunning as a dunny rat.
+durry;au;tobacco, cigarette;durry;Can I have a durry?
+exy;au;expensive;exy;I did not buy it. It was definitely too exy.
+off one’s face;au;drunk;off one’s face;Please don’t end up off your face again.
+to fossick;au;to search;to fossick;I found this neat teapot while fossicking around in that second-hand store down the road
+G’day!;au;hello;gday;G’day, cobber!
+give it a burl;au;try it or have a go;give it a burl;Come on, give it a burl!
+gobsmacked;au;surprised or astounded;gobsmacked;I was gobsmacked when I won the Lotto.
+good oil;au;useful information or a good idea;good oil;That’s definitely good oil.
+grouse;au;great or terrific;grouse;Kangaroos are grouse, mate!
+heaps;au;a lot;heaps;That book is heaps interesting.
+to have kangaroos loose in the top paddock;au;to be intellectually inadequate;to have kangaroos loose in the top paddock;That freak definitely has kangaroos loose in the top paddock.
+kindie;au;kindergarten;kindie;I’ll meet you after I take my children to the kindie
+to knock;au;to criticise;to knock;Don’t knock it until you try it.
+lollies;au;sweets or candies;lollies;I gave her flowers and lollies like a real gentleman.
+mate;au;buddy or friend;mate;What’s going on, mate?
+mozzie;au;mosquito;mozzie;These mozzies are making me go crazy.
+no-hoper;au;somebody who’ll never do well;no-hoper;Considering how he behaves, he’s definitely a no-hoper.
+not the full quid;au;not bright intellectually;not the full quid;Stop trying to reason with him, he’s not the full quid.
+in the nuddy;au;naked;in the nuddy;I swear, they were all in the nuddy on that beach.
+oldies;au;parents;oldies;My oldies don’t want me to drink alcohol.
+Pig’s arse!;au;I don’t agree with you;pigs arse;Pig’s arse! She never said that!
+polly;au;politician;polly;That polly really gets on my nerves.
+Rack off!;au;Get out of here! Push off!;rack off;Rack off! Leave me alone!
+rage;au;party;rage;That rage last night, mate. It was so ace.
+Reckon!;au;You bet!;reckon;Reckon. I’m sure you didn’t.
+rellie;au;family relative;rellie;All my rellies were there.
+to feel stuffed;au;to be tired;to feel stuffed;I feel so stuffed. I’m going to bed.
+to sunbake;au;to sunbathe;to sunbake;There were so many people sunbaking I could find room to lie down.
+sunnies;au;sunglasses;sunnies;I love your sunnies. Where did you buy them?
+to veg out;au;to relax in front of the TV;to veg out;He’s such a loafer. He spends his time vegging out.
+vejjo;au;vegetarian;vejjo;I would never eat at McDonald’s. Nothing there is vejjo.
+He’s got the Wobbly boot on;au;He’s drunk;hes got the wobbly boot on;Look at him! He’s definitely got the Wobbly boot on.
+wog;au;flu or trivial illness;wog;I’m fed up with that wog.
+to yabber;au;to talk a lot;to yabber;All she does is yabber. Why don’t you tell her to shut up?
+monkey’s wedding;za;simultaneous rain and sunshine;monkey’s wedding;
+cubbyhole;za;glove compartment in a car;cubbyhole;
+braai;za;a period of fasting;braai;
+kombi;za;a minibus;kombi;
+geyser;za;a hot-water storage tank;geyser;
+bakkie;za;a light pickup truck;bakkie;
+sarmie;za;sandwich;sarmie;
+oke;za;man;oke;
+lank;za;numerous or plentiful;lank;
+takkies;za;Rubber-soled sports shoes;takkies;
+at the weekend;gb;on the weekend;at the weekend;I like to relax at the weekend.
+on the weekend;us;at the weekend;on the weekend;I like to relax on the weekend.
+to bath;gb;to wash oneself;to bath;Naomi prefers to bath in the morning.
+to bathe;us;to wash oneself;to bathe;On long hiking trips, it is difficult to bathe properly.
+beetroot;gb;beets;beetroot;The success enabled him to open up a worldwide beetroot breeding program.
+biscuit;gb;cookie;biscuit;These biscuits are made with oatmeal.
+cookie;us;biscuit;cookie;Children love eating cookies.
+boot;gb;rear compartment of a vehicle;boot;There is plenty of room for luggage in the boot of my car.
+trunk;us;rear compartment of a vehicle;trunk;There is plenty of room for luggage in the trunk of my car.
+brackets;gb;parentheses;brackets;The author added an explanation in brackets.
+car park;gb;parking lot;car park;The office is too far from the car park.
+parking lot;us;car park;parking lot;The office is too far from the parking lot.
+centre;gb;center;centre;Most shops are located in the centre of the city.
+center;us;centre;center;Most shops are located in the center of the city.
+chemist’s shop;gb;drugstore or pharmacy;chemist’s shop;The proposal to return all unused products to the chemist’s shop is not workable in practice.
+drugstore;us;pharmacy or chemist’s shop;drugstore;The proposal to return all unused products to the drugstore is not workable in practice.
+pharmacy;us;drugstore or chemist’s shop;pharmacy;The proposal to return all unused products to the pharmacy is not workable in practice.
+chips;gb;French fries;chips;I love fish and chips.
+French fries;us;chips;french fries;Puerto Rico continues to be a key market for exports of frozen French fries.
+downtown;us;city center;downtown;Rent prices downtown are very high.
+colour;gb;color;colour;Blue and red are the two colours I prefer.
+color;us;colour;color;Blue and red are the two colors I prefer.
+bathing costume;gb;swimsuit;bathing costume;You must bring your own bathing costume.
+swimsuit;us;bathing or swimming costume;swimsuit;You must bring your own swimsuit.
+potato chips;us;crisps;potato chips;You should consider offering popcorn instead of potato chips.
+crossroads;gb;crossroad or intersection;crossroads;Around ten years ago, I arrived at a crossroads in my career and life.
+crossroad;us;crossroad (in the country);crossroad;This crossroad will be transformed into an interchange soon.
+intersection;us;crossroad (town and country);intersection;Cars must yield at the intersection.
+driving licence;gb;driver’s licence;driving licence;Her driving licence is not revoked,  nor is she hounded by the state.
+driver’s licence;us;driving licence;driver’s licence;You need a valid driver’s license to be considered for the job.
+expiry date;gb;expiration date;expiry date;The expiry date is written on the bottle cap.
+expiration date;us;expiry date;expiration date;The passport is valid until its expiration date.
+favourite;gb;favorite;favourite;Tennis has always been her favourite sport.
+favorite;us;favourite;favorite;Tennis has always been her favorite sport.
+fire brigade;gb;fire department;fire brigade;Yesterday, the fire brigade were called out four times.
+ground floor;gb;first floor in the US;ground floor;His office is located on the ground floor.
+first floor;us;ground floor in the UK;first floor;His office is located on the first floor.
+flat;gb;apartment;flat;He lives in a small flat.
+apartment;us;flat;apartment;He lives in a small apartment.
+flavour;gb;flavor;flavour;I prefer meals with spicy flavours.
+flavor;us;flavour;flavor;I prefer meals with spicy flavors.
+fortnight;gb;two weeks;fortnight;I’m going on a trip for a fortnight.
+to hire;gb;to rent;to hire;I usually hire a car when I’m abroad.
+jumper;gb;sweater;jumper;I knitted a jumper for my daughter.
+ladybird;gb;a small beetle with a typically red domed back;ladybird;We see the damage of the harlequin ladybird.
+ladybug;us;a small beetle with a typically red domed back;ladybug;We also saw love blossom between a plump ladybug and a bluebottle fly.
+lift;gb;elevator;lift;We can take the lift to the third floor.
+lorry;gb;truck;lorry;The lorry transported the furniture to the store.
+truck;us;lorry;truck;The truck has an extremely high payload.
+pants;gb;underpants;pants;My mother mended a hole in my pants.
+pedestrian crossing;gb;a part of a road where pedestrian can cross;pedestrian crossing;The pedestrian crossing was snow- and ice-covered.
+crosswalk;us;a part of a road where pedestrian can cross;crosswalk;Always walk your bike through a crosswalk.
+to queue;gb;take one’s place in a queue;to queue;Queuing is a national sport for the Brits.
+railway;gb;a track made of steel along which trains run;railway;The railway connects the two biggest cities of the region.
+railroad;us;a track made of steel along which trains run;railroad;The railroad connects the two biggest cities of the region.
+rubbish;gb;garbage;rubbish;After the parade, the streets were scattered with rubbish.
+rucksack;gb;backpack;rucksack;The rucksack provides great comfort due to its ergonomic shape.
+sales clerk;us;shop assistant;sales clerk;I started as a sales clerk and then I had the opportunity to change the accounting.
+bathroom;us;toilet or lavatory;bathroom;I think he is looking for the bathroom.
+restroom;us;toilet or lavatory;restroom;When you see the handwriting on the walls, you can bet you’re in a public restroom.
+loo;gb;toilet or restroom;loo;My problem is that when I get nervous, I need to go to the loo every five minutes.
+lavatory;gb;toilet or restroom;lavatory;Mr. Weasley, that is the girls’ lavatory.
+trainers;gb;sport shoes;trainers;Please remember to bring comfortable walking shoes, boots or trainers.
+sneakers;us;sport shoes;sneakers;Please remember to bring comfortable walking shoes, boots or sneakers.
+trousers;gb;pants;trousers;My trousers are made of velvet.
+underground;gb;subway, underground train;underground;Where is the closest underground station?
+tube;gb;subway, underground train;tube;I have to take the tube everyday to go to work.
+subway;us;underground train;subway;They were already building the subway by then.
+wardrobe;gb;closet;wardrobe;My wife’s wardrobe is filled with beautiful clothes.
+zebra crossing;gb;a part of a road where pedestrian can cross;zebra crossing;They have been making ergonomic zebra crossing to make pedestrian crossing safer.
+to airdash;in;to make a quick journey by air;;
+to crib;in;to complain;;
+timepass;in;action of passing the time in an aimless way;;
+to prepone;in;reschedule something to an earlier date;;
+godown;in;warehouse;;
+cooling glasses;in;sunglasses;;
+incharge;in;manager or superviser;;
+batchmate;in;member of the same graduating class;;
+History-sheeter;in;person with a criminal record;;
+freeship;in;full payment for university or college studies;;
+to revert back;in;to reply;;
