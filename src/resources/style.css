@@ -124,3 +124,7 @@ Label {
 .startButton:pressed {
 	-fx-text-fill: blue;
 }
+
+.example {
+	-fx-font-size: 20; 
+}

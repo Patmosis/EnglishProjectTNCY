@@ -9,13 +9,13 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.geometry.VPos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.TextAlignment;
 import javazoom.jl.player.Player;
 
 public class WordView extends BorderPane {
@@ -77,7 +77,6 @@ public class WordView extends BorderPane {
 	    hbox.setAlignment(Pos.CENTER);
 	    hbox.setSpacing(20);
 	    vbox.getChildren().add(hbox);
-	    GridPane.setValignment(word, VPos.CENTER);
 	    
 	    meaning = new Label(words.get(randomNumber).get(2));
 
@@ -89,8 +88,32 @@ public class WordView extends BorderPane {
             }
         });
 	    vbox.getChildren().add(showMeaning);
+
+	    VBox mainVBox = new VBox();
+	    mainVBox.setPadding(new Insets(10));
+	    mainVBox.setAlignment(Pos.CENTER);
+	    mainVBox.setSpacing(65);
 	    
-	    this.setCenter(vbox);
+	    mainVBox.getChildren().add(vbox);
+	    
+	    String exampleText = words.get(randomNumber).get(4);
+	    if (!(exampleText.equals(""))) {
+		    Label example = new Label(/*"Example: " + */exampleText);
+		    example.setMaxWidth(600);
+		    example.setWrapText(true);
+		    example.setTextAlignment(TextAlignment.CENTER);
+		    example.getStyleClass().add("example");
+		    
+		    AnchorPane.setLeftAnchor(example, 0.0);
+		    AnchorPane.setRightAnchor(example, 0.0);
+		    example.setAlignment(Pos.CENTER);
+		    
+		    mainVBox.getChildren().add(example);
+	    }
+	    
+	    this.setCenter(mainVBox);
+	    
+	    
 	}
 	
 }
