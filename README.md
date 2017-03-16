@@ -1,8 +1,8 @@
 # EnglishProjectTNCY
 
-**App aiming at helping user work on their English**
+**App aiming at helping user work on their knowledge of English**
 
-*English course, TELECOM Nancy 2016-2017*
+*English module, TELECOM Nancy 2016-2017*
 
 * **Authors**
 
@@ -12,12 +12,9 @@
 * **Dependancies**
 
   - JavaFX
-
-* **Build & execute:**
-
-  - None
+  - JLayer 1.0.1
 
 * **Description**
 
-	* *Project content to be defined*
+	* *The application is devided into two parts: one aims at discovering the history of the British Empire and the other one helps you learn vocabulary and slang from various speaking countries around the world.*
 
