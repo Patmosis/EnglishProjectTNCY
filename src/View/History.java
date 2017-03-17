@@ -51,6 +51,7 @@ public class History extends BorderPane {
 		
 		if(numPage == 0) {
 			
+			title.setText("the british colonial empire throughout history");
 			start.getStyleClass().add("startButton");
 			
 			start.setOnAction(new EventHandler<ActionEvent>() {
