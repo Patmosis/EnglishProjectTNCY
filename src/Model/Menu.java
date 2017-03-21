@@ -19,6 +19,7 @@ public class Menu extends GridPane {
 	private Button language = new Button("Language");
 	private Button history = new Button("History");
 	private Button closingButton = new Button(" x ");
+	private Button reducingButton = new Button(" ⎼ ");
 	private BorderPane windowMainPane;
 	private Stage gameMainStage;
 	
@@ -28,49 +29,67 @@ public class Menu extends GridPane {
 		windowMainPane = mainPane;
 		gameMainStage = stage;
 		
-		// Sets horizontal gap between parts of the menu
-		setHgap(360);//260
+		// Set horizontal gap between parts of the menu
+		setHgap(320);//260
 		getStyleClass().add("mainMenu");
 		
-		// Initializes class attributes
+		// Initialize class attributes
 		initializeAttributes();
 	    
-	    // Sets language-history menu part
+	    // Set language-history menu part
 	    GridPane actualMenu = new GridPane();
 	    actualMenu.setHgap(1);
 	    actualMenu.add(language, 0, 0);
 	    actualMenu.add(history, 1, 0);
 	    
-	    // Adds nodes to menu
+	    // Set window's properties menu part
+	    GridPane propertyMenu = new GridPane();
+	    propertyMenu.setHgap(1);
+	    propertyMenu.add(reducingButton, 0, 0);
+	    propertyMenu.add(closingButton, 1, 0);
+	    
+	    
+	    // Add nodes to menu
 	    add(actualMenu,0,0);    	    
-	    add(closingButton, 1, 0);
+	    add(propertyMenu, 1, 0);
 	}
 	
 	private void initializeAttributes() {		
-		// Sets language button properties
+		// Set language button properties
 	    language.setMinWidth(200);//250
 	    language.setAlignment(Pos.CENTER);
 	    language.getStyleClass().clear();
 	    language.getStyleClass().add("menuButton");
 	    
-	    // Sets history button properties
+	    // Set history button properties
 	    history.setMinWidth(200);//250
 	    history.setAlignment(Pos.CENTER);
 	    history.getStyleClass().clear();
 	    history.getStyleClass().add("menuButton");
 	    
-	    // Sets closing button button properties
+	    // Set closing button button properties
 	    closingButton.getStyleClass().clear();
 	    closingButton.getStyleClass().add("menuButton");
 	    
-	    // Closes window/application on click
+	    // Set reducing button button properties
+	    reducingButton.getStyleClass().clear();
+	    reducingButton.getStyleClass().add("menuButton");
+	    
+	    // Close window/application on click
 	    closingButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
             	gameMainStage.close();
             }
         });
 	    
-	    // Switches to the language part of the application on click
+	    // Reduce window/application on click
+	    reducingButton.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent e) {
+            	gameMainStage.setIconified(true);
+            }
+        });
+	    
+	    // Switch to the language part of the application on click
 	    language.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
                 if (currentTab == null || currentTab.equals("history")) {
@@ -81,7 +100,7 @@ public class Menu extends GridPane {
             }
         });
 	    
-		// Switches to the history part of the application on click
+		// Switch to the history part of the application on click
 	    history.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
             	if (currentTab == null || currentTab.equals("language")) {

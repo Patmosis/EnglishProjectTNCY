@@ -69,7 +69,7 @@ public class Language extends BorderPane {
 
         // Set buttons position
         StackPane.setMargin(usaButton, new Insets(0, 460, 50, 0)); 
-        StackPane.setMargin(ukButton, new Insets(0, 70, 120, 0));
+        StackPane.setMargin(ukButton, new Insets(0, 80, 120, 0));
         StackPane.setMargin(indiaButton, new Insets(25, 0, 0, 250));
         StackPane.setMargin(australiaButton, new Insets(230, 0, 0, 470));
         StackPane.setMargin(southAfricaButton, new Insets(240, 0, 0, 25));
@@ -82,6 +82,7 @@ public class Language extends BorderPane {
 	/**
 	 * Create a clickable area for the world map
 	 * @param string to be printed, number of the method to be called when area is clicked
+	 * @return a map button of the required country 
 	 */
 	public Button createMapButton(String s, final int functionToBeCalled) {
 		Button button = new Button(s);
@@ -102,10 +103,10 @@ public class Language extends BorderPane {
             	initialize();
             }
         });
-		back.getStyleClass().add("backButton");
+		back.getStyleClass().add("arrowButton");
 		titlePane.add(back, 0, 0);
 		
-		
+		// Set country view title and country reference for words in database
 		String newTitle = null;
 		String newCountry = null;
     	switch (countryId) {

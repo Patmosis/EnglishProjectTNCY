@@ -26,16 +26,16 @@ bogan;au;person who takes little pride in his appearance;bogan;This guy is a tot
 Izit?;za;Is that so?;izit;
 loskop;za;loose head;loskop;I’m such a loskop today. I forgot your jacket at home.
 lekker;za;good;lekker;That was a lekker braai bru!
-babelaas;za;hangover;babelaas;
+babelaas;za;hangover;babelaas;I can get a babelaas after only one glass of beer.
 jol;za;party;jol;Sounds like they’re having a real jol next door.
-muti;za;medication;muti;
-robot;za;trafic light;robot;
+muti;za;medication;muti;I’m ill but I don’t want to take any mutis.
+robot;za;trafic light;robot;That robot is taking so long!
 brinjal;in;purple egg-shaped fruit eaten as a vegetable;brinjal;Brinjal is the main ingredient of many Indian dishes.
-to pass out;in;to graduate;to pass out;
-foreign-returned;in;returned to India after living in a foreign country;foreign-returned;
-convent-educated;in;studied in a school that uses English;convent-educated;
-to be sitting on smbdy’s head;in;to stress out smbdy;to be sitting on smbdy’s head;
-to eat smbdy’s brain;in;not to stop talking;to eat smbdy’s brain;
+to pass out;in;to graduate;to pass out;I passed out in computer science in 2006.
+foreign-returned;in;returned to India after living in a foreign country;foreign-returned;People always bring up the fact that I am foreign-returned.
+convent-educated;in;studied in a school that uses English;convent-educated;I’m lucky enough to be convent-educated.
+to be sitting on smbdy’s head;in;to stress out smbdy;to be sitting on smbdy’s head;That person is really sitting on my head.
+to eat smbdy’s brain;in;not to stop talking;to eat smbdy’s brain;When is he going to stop eating my brain?
 Sho?;za;Is that so?;sho;
 boozer;au;a pub;boozer;I was told there is a nice boozer down the street.
 brekkie;au;breakfast;brekkie;I had eggs and tomato on toast for brekkie today.
@@ -88,16 +88,16 @@ vejjo;au;vegetarian;vejjo;I would never eat at McDonald’s. Nothing there is ve
 He’s got the Wobbly boot on;au;He’s drunk;hes got the wobbly boot on;Look at him! He’s definitely got the Wobbly boot on.
 wog;au;flu or trivial illness;wog;I’m fed up with that wog.
 to yabber;au;to talk a lot;to yabber;All she does is yabber. Why don’t you tell her to shut up?
-monkey’s wedding;za;simultaneous rain and sunshine;monkey’s wedding;
-cubbyhole;za;glove compartment in a car;cubbyhole;
+monkey’s wedding;za;simultaneous rain and sunshine;monkey’s wedding;It’s a monkey’s wedding outside.
+cubbyhole;za;glove compartment in a car;cubbyhole;Can you give me my sunglasses? They are in the cubbyhole.
 braai;za;a backyard barbecue;braai;That was a lekker braai bru!
-kombi;za;a minibus;kombi;
+kombi;za;a minibus;kombi;The kombi we went on holiday with was pretty old.
 geyser;za;a hot-water storage tank;geyser;
 bakkie;za;a light pickup truck;bakkie;
-sarmie;za;sandwich;sarmie;
-oke;za;man;oke;
+sarmie;za;sandwich;sarmie;I’ve brought a sarmie for lunch.
+oke;za;man;oke;Come on, oke! Come with us!
 lank;za;numerous or plentiful;lank;
-takkies;za;Rubber-soled sports shoes;takkies;
+takkies;za;rubber-soled sports shoes;takkies;As for hiking, don’t forget to bring good walking shoes or takkies.
 at the weekend;gb;on the weekend;at the weekend;I like to relax at the weekend.
 on the weekend;us;at the weekend;on the weekend;I like to relax on the weekend.
 to bath;gb;to wash oneself;to bath;Naomi prefers to bath in the morning.
@@ -168,88 +168,87 @@ tube;gb;subway, underground train;tube;I have to take the tube everyday to go to
 subway;us;underground train;subway;They were already building the subway by then.
 wardrobe;gb;closet;wardrobe;My wife’s wardrobe is filled with beautiful clothes.
 zebra crossing;gb;a part of a road where pedestrian can cross;zebra crossing;They have been making ergonomic zebra crossing to make pedestrian crossing safer.
-to airdash;in;to make a quick journey by air;;
-to crib;in;to complain;;
-timepass;in;action of passing the time in an aimless way;;That movie was real time-pass.
-to prepone;in;reschedule something to an earlier date;;
-godown;in;warehouse;;
-cooling glasses;in;sunglasses;;
-incharge;in;manager or superviser;;
-batchmate;in;member of the same graduating class;;
-History-sheeter;in;person with a criminal record;;
-freeship;in;full payment for university or college studies;;
-to revert back;in;to reply;;
-convent-going;in;;;
-cousin-brother;in;male cousin;;
-cousin-sister;in;female cousin;;
-chalk-piece;in;;;
-key-bunch;in;;;
-meeting notice;in;;;
-age barred;in;;;
-pindrop silence;in;;;
-enthu;in;enthusiasm;;He is a real enthu guy
-fundas;in;fundamentals;;She knows her fundas.
-fundu;in;wonderful, brilliant;;He is a fundu person.
-roti;in;bread;;
-to muskafy;in;to flatter smbd, to butter smbd up;;
-to pastaofy;in;to woo smbd;;
-mixi;in;a food grinder;;
-jangos;in;people who are very modern and fashionable;;
-fast;in;untraditional and modern;;
-deadly movie;in;hard-hitting and action-packed movie;;
-hi-tech;in;exceedingly incredible;;That guy is wearing a high-tech outfit.
-an at home;in;a reception;;
-a thumbs-up;in;an illiterate person;;
-under root;in;square root;;
-general mai;in;in general;;
-ek minute;in;one minute;;
-take care karje;in;do take care;;
-mausum;in;weather, season;;What an awesome mausum today!
-nahi;in;not bright intellectually;;
-kya;in;what;;
-achchaa;in;good;;
-arrai;in;hey;;
-bahut;in;a lot;;
-bu;in;that’s it;;
-ghotu;in;one who reads a lot;;
-hajar;in;a ton (more than a lot);;
-ho gaya;in;done, finished;;
-Koi bat nahi!;in;No problem!;;
-Kya hall hai?;in;How are you?;;
-lakh;in;one-hundred thousand;;
-lekhin;in;but;;
-masala;in;bold, spicy;;
-muthlab;in;meaning;;
-paka;in;pure;;
-Teek hai!;in;Okay!;;
-yaar;in;buddy, pal;;
-Ag!;za;Oh! or Ah!;;Ag! I don’t know!
-klap;za;smack, whack or spank;;Klaps are part of education in South Africa.
-dop;za;a drink or a cocktail;;I was invited for a dop today.
-to dop;za;to fail;;I’m gonna dop that test!
-Howzit?;za;greeting;;
-now now;za;in a while;;Just wait, I’ll be there now now.
-to get lekker geklap;za;to get very drunk;;
-to be tuned grief;za;to be aggravated or harassed;;You’re turning me grief, hey?
-boet;za;brother, bro;;
-Pasop!;za;Watch out!;;The boss hasn’t had his coffee yet, so you better pasop, boet.
-skop, skiet en donner;za;“kick, shoot and thunder” (describe action movies);;I’m in the mood for a lekker skop, skiet en donner flick.
-vrot;za;rotten, putrid;;
-to get lekker vrot;za;to get horribly drunk;;
-to rock up;za;to arrive somewhere without noticing;;
-to scale;za;to steal;;
-scaly;za;who has a doubtful character;;
-slap chips;za;deep fried potato chips;;I’ve heard this restaurant’s slap chips are lekker.
-to skinner;za;to gossip;;Don’t skinner about me.
-kief;za;cool, great, awesome or neat;;That’s a kief car!
-just now;za;later (and not “right now”);;I’ll do that just now.
-indaba;za;conference or exposition;;
-Shame!;za;Damn!;;
-Eish!;za;colloquial exclamation of surprise or exasperation;;Eish, I broke my phone!
-Sharp sharp!;za;Goodbye! or to express that everything is great;;
-shebeen;za;unlicensed bar;;
-mielie;za;maize or corn;;Mielies is a staple diet for the majority of South Africans.
-naartjie;za;any orange-coloured citrus fruit;;
-pap;za;porridge (especially maize porridge);;
-sosatie;za;kebab;;
-boerewor;za;sausage;;
+to airdash;in;to make a quick journey by air;to airdash;He airdashed to Delhi for specialist treatment for his injury.
+to crib;in;to complain;to crib;You are always cribbing!
+timepass;in;action of passing the time in an aimless way;timepass;That movie was real time-pass.
+to prepone;in;reschedule something to an earlier date;to prepone;The government might prepone these elections so we’d better be ready.
+godown;in;warehouse;godown;Our godown is dedicated to furniture storage.
+cooling glasses;in;sunglasses;cooling glasses;I can’t wait for summer to be here so I can use my new cooling glasses!
+incharge;in;manager or superviser;incharge;The incharge of our department thinks we can meet deadline.
+batchmate;in;member of the same graduating class;batchmate;My school is so big that I barely know half of my batchmate.
+history-sheeter;in;person with a criminal record;history-sheeter;You must not be a history-sheeter to apply for that job.
+freeship;in;full payment for university or college studies;freeship;She got a freeship for a prestigious university.
+to revert back;in;to reply;to revert back;Why don’t you revert back to him?
+cousin-brother;in;male cousin;cousin-brother;
+cousin-sister;in;female cousin;cousin-sister;
+chalk-piece;in;chalk to write on blackboards;chalk-piece;I’m going to ask the teacher next door for chalk-piece.
+key-bunch;in;bunch of keys;key-bunch;
+meeting notice;in;notice of meeting;meeting notice;Have you received the meeting notice I sent you?
+age barred;in;younger or older than the age required for an activity;age barred;
+pindrop silence;in;complete silence;pindrop silence;The response has been pindrop silence.
+enthu;in;enthusiasm;enthu;He is a real enthu guy
+fundas;in;fundamentals;fundas;She knows her fundas.
+fundu;in;wonderful, brilliant;fundu;He is a fundu person.
+roti;in;bread;roti;There’s not roti left. Have you bought some?
+to muskafy;in;to flatter smbd, to butter smbd up;to muskafy;
+to pastaofy;in;to woo smbd;to pastaofy;
+mixi;in;a food grinder;mixi;Put the tomatoes in the mixi and ground them.
+jangos;in;people who are very modern and fashionable;jangos;
+fast;in;untraditional and modern;fast;This outfit is so fast.
+deadly movie;in;hard-hitting and action-packed movie;deadly movie;
+high-tech;in;exceedingly incredible;high-tech;That guy is wearing a high-tech outfit.
+an at home;in;a reception;an at home;
+a thumbs-up;in;an illiterate person;a thumbs-up;
+under root;in;square root;under root;The under root of four is two.
+general mai;in;in general;general mai;
+ek minute;in;one minute;ek minute;I’ll be back in ek minute.
+take care karje;in;do take care;take care karje;
+mausum;in;weather, season;mausum;What an awesome mausum today!
+nahi;in;not bright intellectually;nahi;
+kya;in;what;kya;
+achchaa;in;good;achchaa;
+arrai;in;hey;arrai;
+bahut;in;a lot;bahut;
+bu;in;that’s it;bu;
+ghotu;in;one who reads a lot;ghotu;
+hajar;in;a ton (more than a lot);hajar;
+ho gaya;in;done, finished;ho gaya;
+Koi bat nahi!;in;No problem!;koi bat nahi;
+Kya hall hai?;in;How are you?;kya hall hai;
+lakh;in;one-hundred thousand;lakh;
+lekhin;in;but;lekhin;
+masala;in;bold, spicy;masala;
+muthlab;in;meaning;muthlab;
+paka;in;pure;paka;
+Teek hai!;in;Okay!;teek hai;
+yaar;in;buddy, pal;yaar;
+Ag!;za;Oh! or Ah!;ag;Ag! I don’t know!
+klap;za;smack, whack or spank;klap;Klaps are part of education in South Africa.
+dop;za;a drink or a cocktail;dop;I was invited for a dop today.
+to dop;za;to fail;to dop;I’m gonna dop that test!
+Howzit?;za;greeting;howzit;
+now now;za;in a while;now now;Just wait, I’ll be there now now.
+to get lekker geklap;za;to get very drunk;to get lekker geklap;
+to be tuned grief;za;to be aggravated or harassed;to be tuned grief;You’re turning me grief, hey?
+boet;za;brother, bro;boet;
+Pasop!;za;Watch out!;pasop;The boss hasn’t had his coffee yet, so you better pasop, boet.
+skop, skiet en donner;za;“kick, shoot and thunder” (describe action movies);skop, skiet en donner;I’m in the mood for a lekker skop, skiet en donner flick.
+vrot;za;rotten, putrid;vrot;
+to get lekker vrot;za;to get horribly drunk;to get lekker vrot;I feel so ashamed. I ended up getting lekker vrot yesterday night.
+to rock up;za;to arrive somewhere without noticing;to rock up;
+to scale;za;to steal;to scale;
+scaly;za;who has a doubtful character;scaly;I have a bad feeling about him. I find him quite scaly.
+slap chips;za;deep fried potato chips;slap chips;I’ve heard this restaurant’s slap chips are lekker.
+to skinner;za;to gossip;to skinner;Don’t skinner about me.
+kief;za;cool, great, awesome or neat;kief;That’s a kief car!
+just now;za;later (and not “right now”);just now;I’ll do that just now.
+indaba;za;conference or exposition;indaba;I’m thinking of going to that inbada organized down the street.
+Shame!;za;Damn!;Shame!;
+Eish!;za;colloquial exclamation of surprise or exasperation;eish;Eish, I broke my phone!
+Sharp sharp!;za;Goodbye! or to express that everything is great;sharp sharp;
+shebeen;za;unlicensed bar;shebeen;
+mielie;za;maize or corn;mielie;Mielies is a staple diet for the majority of South Africans.
+naartjie;za;any orange-coloured citrus fruit;naartjie;South African people don’t make a difference between different kinds of naartjies.
+pap;za;porridge (especially maize porridge);pap;I usually eat pap in the morning.
+sosatie;za;kebab;sosatie;
+boerewor;za;sausage;boerewor;We ate lekker boerewors at my braai yesterday.
