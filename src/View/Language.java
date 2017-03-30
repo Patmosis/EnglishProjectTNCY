@@ -144,6 +144,7 @@ public class Language extends BorderPane {
         });
     	nextButton.getStyleClass().add("appButton");
     	StackPane bottomStack = new StackPane();
+    	bottomStack.getStyleClass().add("accessButtons");
     	bottomStack.setAlignment(Pos.CENTER);
     	bottomStack.getChildren().add(nextButton);
     	this.setBottom(bottomStack);

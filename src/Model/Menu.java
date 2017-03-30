@@ -2,9 +2,11 @@ package Model;
 
 import View.*;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -23,8 +25,12 @@ public class Menu extends GridPane {
 	private BorderPane windowMainPane;
 	private Stage gameMainStage;
 	
+	private static double xOffset = 0;
+    private static double yOffset = 0;
+	
 	private String currentTab = null;
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Menu(final BorderPane mainPane, final Stage stage) {
 		windowMainPane = mainPane;
 		gameMainStage = stage;
@@ -39,8 +45,8 @@ public class Menu extends GridPane {
 	    // Set language-history menu part
 	    GridPane actualMenu = new GridPane();
 	    actualMenu.setHgap(1);
-	    actualMenu.add(language, 0, 0);
-	    actualMenu.add(history, 1, 0);
+	    actualMenu.add(history, 0, 0);
+	    actualMenu.add(language, 1, 0);
 	    
 	    // Set window's properties menu part
 	    GridPane propertyMenu = new GridPane();
@@ -52,6 +58,28 @@ public class Menu extends GridPane {
 	    // Add nodes to menu
 	    add(actualMenu,0,0);    	    
 	    add(propertyMenu, 1, 0);
+	    
+	    
+	    this.setOnMousePressed(new EventHandler() {
+            public void handle(MouseEvent event) {
+                xOffset = stage.getX() - event.getScreenX();
+                yOffset = stage.getY() - event.getScreenY();
+            }
+
+			@Override
+			public void handle(Event arg0) {
+				handle((MouseEvent) arg0);
+				
+			}
+        });
+	    
+	    this.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+            	stage.setX(event.getScreenX() + xOffset);
+                stage.setY(event.getScreenY() + yOffset);
+            }
+        });
 	}
 	
 	private void initializeAttributes() {		
@@ -123,6 +151,22 @@ public class Menu extends GridPane {
 			language.setDisable(true);
 			history.setDisable(false);
 		}
+	}
+	
+	public void setHistory() {
+		if (currentTab == null || currentTab.equals("language")) {
+    		currentTab = "history";
+    		updateTabButtons();
+    		windowMainPane.setCenter(new History(0));
+    	}
+	}
+	
+	public void setLanguage() {
+		if (currentTab == null || currentTab.equals("history")) {
+        	currentTab = "language";
+        	updateTabButtons();
+        	windowMainPane.setCenter(new Language());
+        }
 	}
 	
 }

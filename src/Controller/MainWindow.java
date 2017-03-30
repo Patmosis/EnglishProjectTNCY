@@ -3,7 +3,6 @@ package Controller;
 
 import Model.*;
 import View.*;
-import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -23,10 +22,11 @@ public class MainWindow {
         
         // Defines main layout and scene
         BorderPane mainPane = new BorderPane();
-        mainPane.setTop(new Menu(mainPane, stage));
+        Menu menu = new Menu(mainPane, stage);
+        mainPane.setTop(menu);
         mainPane.getStyleClass().add("mainPane");
         // Sets default text on opening application
-        mainPane.setCenter(new Label("Welcome to our app!"));
+        mainPane.setCenter(new HomePage(menu));//(new Label("Welcome to our app!"));
         MainScene scene = new MainScene(mainPane, 800, 600);
 
         // Sets style sheet and scene

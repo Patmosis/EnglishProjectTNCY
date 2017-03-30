@@ -11,6 +11,31 @@ Label {
 }
 
 
+/* Description of the application */
+.appDescription {
+	-fx-text-fill: #000044;
+	-fx-font-size: 25; 
+}
+
+
+/* Access buttons */
+.accessButtons {
+	-fx-padding: -50 0 50 0 ;
+}
+
+.homeButtons {
+	-fx-background-color: transparent;
+	-fx-padding: 0;
+	-fx-border-color: blue;
+    -fx-border-width: 5;
+    -fx-border-style: solid;
+}
+
+.homeButtons:hover {
+	-fx-border-color: red;
+}
+
+
 /* Main menu general properties */
 .mainMenu {
 	-fx-background-color:linear-gradient(#5b5bd7, #adadeb);
@@ -34,7 +59,7 @@ Label {
 	-fx-background-color: #1f1f7a;
 }
     
-    
+     
 /* Menu buttons' properties */
 .menuButton {
 	-fx-text-fill: white;
