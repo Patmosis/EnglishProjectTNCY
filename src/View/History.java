@@ -31,8 +31,8 @@ public class History extends BorderPane {
 		
 		getChildren().removeAll();
 		
-		prev.getStyleClass().add("backButton");
-		next.getStyleClass().add("backButton");
+		prev.getStyleClass().add("arrowButton");
+		next.getStyleClass().add("arrowButton");
 		
 		prev.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {

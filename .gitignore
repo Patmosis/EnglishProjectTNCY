@@ -9,3 +9,9 @@ pom.xml
 /bin/
 /target/
 /.settings/
+
+
+# LaTeX files #
+*.aux
+*.log
+*.synctex.gz
