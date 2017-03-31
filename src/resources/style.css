@@ -84,7 +84,7 @@ Label {
 /* Pane title properties */
 .paneTitle {
 	/*-fx-background-color: #3366ff;*/	
-	-fx-font-size: 35; 
+	-fx-font-size: 30; 
 }
 
 /* History title properties */
@@ -158,11 +158,28 @@ Label {
 	-fx-text-fill: blue;
 }
 
+.nextprevButton {
+	-fx-text-fill: #3333cc;
+	-fx-padding: 0 10 0 10;
+	-fx-background-color: transparent;
+	-fx-font-size: 25; 
+	-fx-font-weight: bold; 
+}
+
+.nextprevButton:hover {
+	-fx-text-fill: #1f1f7a;
+}
+
+.nextprevButton:pressed {
+	-fx-text-fill: blue;
+}
+
+
 .startButton {
 	-fx-text-fill: #3333cc;
 	-fx-padding: 10;
 	-fx-background-color: transparent;
-	-fx-font-size: 25; 
+	-fx-font-size: 30; 
 	-fx-font-weight: bold; 
 }
 
