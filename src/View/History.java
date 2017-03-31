@@ -11,7 +11,7 @@ import javafx.scene.layout.VBox;
 
 public class History extends BorderPane {
 	
-	private static int nbPages = 15;
+	private static int nbPages = 19;
 	private int numPage = 0;
 	
 	
