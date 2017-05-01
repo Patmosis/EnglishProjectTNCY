@@ -15,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import javazoom.jl.player.Player;
 
@@ -80,6 +81,7 @@ public class WordView extends BorderPane {
 
 		// Label show word that is being considered
 	    Label word = new Label(words.get(wordNumber).get(0));
+	    word.setFont(new Font("Arial", 40));
 	    
 	    // Create play button; access mp3 file using JLayer
 	    Button play = new Button("▶");
@@ -122,7 +124,7 @@ public class WordView extends BorderPane {
  		wordAndPlayAndMeaningBox = new VBox();
  		wordAndPlayAndMeaningBox.setPadding(new Insets(10));
  		wordAndPlayAndMeaningBox.setAlignment(Pos.CENTER);
- 		wordAndPlayAndMeaningBox.setSpacing(20);
+ 		wordAndPlayAndMeaningBox.setSpacing(30);
  		
  		// Add items to VBox
  		wordAndPlayAndMeaningBox.getChildren().add(wordAndPlayBox);
@@ -134,7 +136,7 @@ public class WordView extends BorderPane {
 	    // HBox containing the word part and the quiz par of the view to display them horizontally
 	    HBox wordAndAnswersBox = new HBox();
 	    wordAndAnswersBox.setAlignment(Pos.CENTER);
-	    wordAndAnswersBox.setSpacing(20);
+	    wordAndAnswersBox.setSpacing(100);
 	    wordAndAnswersBox.getChildren().add(wordAndPlayAndMeaningBox);
 	    wordAndAnswersBox.getChildren().add(answerBox);
 	  
@@ -142,7 +144,7 @@ public class WordView extends BorderPane {
 	    VBox mainVBox = new VBox();
 	    mainVBox.setPadding(new Insets(10));
 	    mainVBox.setAlignment(Pos.CENTER);
-	    mainVBox.setSpacing(65);	    
+	    mainVBox.setSpacing(100);	    
 	    mainVBox.getChildren().add(wordAndAnswersBox); 
 	    
 	    // Add example sentence if there is one

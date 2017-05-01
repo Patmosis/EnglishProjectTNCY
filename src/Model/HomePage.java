@@ -19,8 +19,8 @@ public class HomePage extends BorderPane {
 	
 	public HomePage(final Menu menu) {
 		// Title of the application
-		Text title = new Text("English: a widespread and varied language");// Around the world
-		title.setFont(Font.loadFont("file:src/resources/fonts/Precious.ttf", 40));
+		Text title = new Text("Words and the world");// Around the world
+		title.setFont(Font.loadFont("file:src/resources/fonts/Precious.ttf", 60));
 		title.setFill(Color.color(0, 0, 0.25));
 		title.setTranslateY(50);
 		
@@ -36,7 +36,7 @@ public class HomePage extends BorderPane {
 		
 		description.getStyleClass().add("appDescription");
 		
-		description.setMaxWidth(600);
+		description.setMaxWidth(700);
 		description.setWrapText(true);
 		description.setTextAlignment(TextAlignment.CENTER);
 		
@@ -80,7 +80,7 @@ public class HomePage extends BorderPane {
 		
 		accessButtons.getChildren().add(history);
 		accessButtons.getChildren().add(language);
-		
+				
 		StackPane bottomPane = new StackPane();
 		bottomPane.setAlignment(Pos.CENTER);
 		bottomPane.getChildren().add(accessButtons);

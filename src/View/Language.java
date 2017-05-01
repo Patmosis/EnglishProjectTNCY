@@ -39,6 +39,7 @@ public class Language extends BorderPane {
 		title.setText("     How English is English?");
 		title.getStyleClass().add("paneTitle");
 		titlePane.add(title, 1, 0);
+		titlePane.getStyleClass().add("titlePane");
 		setTop(titlePane);		
 		
 		// Load world map
