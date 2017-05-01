@@ -102,10 +102,12 @@ public class History extends BorderPane {
 		
 		if(numPage == 1) {
 			
-			ImageView mapBox = new ImageView();
+			ImageView mapView = new ImageView();
 			Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
-			mapBox.setImage(map);
-			content.getChildren().add(mapBox);
+			mapView.setPreserveRatio(true);
+			mapView.setFitHeight(380);
+			mapView.setImage(map);
+			content.getChildren().add(mapView);
 			
 			gotobutton.getStyleClass().add("startButton");
 			
@@ -126,10 +128,12 @@ public class History extends BorderPane {
 		
 		if(numPage < nbPages && numPage > 1) {
 			
-			ImageView mapBox = new ImageView();
+			ImageView mapView = new ImageView();
 			Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
-			mapBox.setImage(map);
-			content.getChildren().add(mapBox);
+			mapView.setPreserveRatio(true);
+			mapView.setFitHeight(380);
+			mapView.setImage(map);
+			content.getChildren().add(mapView);
 			
 			gotobox.getChildren().add(gotofield);
 			gotobox.getChildren().add(onpages);
@@ -148,10 +152,12 @@ public class History extends BorderPane {
 		
 		if(numPage == nbPages) {
 			
-			ImageView mapBox = new ImageView();
+			ImageView mapView = new ImageView();
 			Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
-			mapBox.setImage(map);
-			content.getChildren().add(mapBox);
+			mapView.setPreserveRatio(true);
+			mapView.setFitHeight(380);
+			mapView.setImage(map);
+			content.getChildren().add(mapView);
 			
 			gotobox.getChildren().add(gotofield);
 			gotobox.getChildren().add(onpages);
@@ -167,6 +173,8 @@ public class History extends BorderPane {
 					
 		title.setMaxWidth(Double.MAX_VALUE);
 		title.setAlignment(Pos.CENTER);
+		
+		content.setAlignment(Pos.TOP_CENTER);
 		
 		setTop(title);
 		setCenter(content);
