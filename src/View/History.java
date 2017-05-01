@@ -44,7 +44,7 @@ public class History extends BorderPane {
 		Button start = new Button("start");
 		HBox gotobox = new HBox();
 		
-		TextField gotofield = new TextField();
+		final TextField gotofield = new TextField();
 		gotofield.setMinHeight(5);
 		gotofield.setMinWidth(5);
 		gotofield.setPrefSize(50,35);
