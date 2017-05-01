@@ -20,10 +20,6 @@ public class History extends BorderPane {
 	private static int nbPages = 19;
 	private int numPage = 0;
 	private HistoryData data;
-<<<<<<< HEAD
-=======
-	
->>>>>>> 3b55cda95d1d3e5ea9caa85e78b5f64bed05b22e
 	
 	public History(int numPage) {
 		data = new HistoryData();
@@ -34,11 +30,8 @@ public class History extends BorderPane {
 	public void initialize() {
 		
 		Label title = new Label();
-<<<<<<< HEAD
 		title.setText(data.getByNum(numPage).get(1));
-=======
-		title.setText(data.getByNumber(numPage).get(1));
->>>>>>> 3b55cda95d1d3e5ea9caa85e78b5f64bed05b22e
+
 		
 		Label onpages = new Label();
 		onpages.setText("/" + String.valueOf(nbPages));
