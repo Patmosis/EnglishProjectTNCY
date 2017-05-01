@@ -85,6 +85,10 @@ Label {
 .paneTitle {
 	/*-fx-background-color: #3366ff;*/	
 	-fx-font-size: 30; 
+	
+}
+.titlePane {
+	-fx-padding: 20 0 0 20 ;
 }
 
 /* History title properties */
