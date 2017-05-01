@@ -5,13 +5,16 @@ import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 
 public class History extends BorderPane {
 	
-	private static int nbPages = 15;
+	private static int nbPages = 19;
 	private int numPage = 0;
 	
 	
@@ -23,16 +26,32 @@ public class History extends BorderPane {
 	public void initialize() {
 		
 		Label title = new Label();
+		
+		Label onpages = new Label();
+		onpages.setText("/" + String.valueOf(nbPages));
+		
 		VBox content = new VBox();
 		StackPane change = new StackPane();
+		
 		Button prev = new Button("previous\n🢀");
 		Button next = new Button("next\n    🢂");
 		Button start = new Button("start");
+		HBox gotobox = new HBox();
+		
+		TextField gotofield = new TextField();
+		gotofield.setMinHeight(5);
+		gotofield.setMinWidth(5);
+		gotofield.setPrefSize(50,35);
+		gotofield.setFont(new Font(18));
+		Button gotobutton = new Button();
+		gotobutton.setText("go!");
+		
+		prev.getStyleClass().add("nextprevButton");
+		next.getStyleClass().add("nextprevButton");
+		gotobutton.getStyleClass().add("startButton");
+		start.getStyleClass().add("startButton");
 		
 		getChildren().removeAll();
-		
-		prev.getStyleClass().add("arrowButton");
-		next.getStyleClass().add("arrowButton");
 		
 		prev.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
@@ -48,18 +67,30 @@ public class History extends BorderPane {
 			}
 		});
 		
+		start.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent e) {
+				numPage++;
+				initialize();
+			}
+		});
+		
+		gotobutton.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent e) {
+				String fieldcontent = gotofield.getText().replaceAll("[\\D]","");
+				if(!(fieldcontent.equals(""))) {
+					int value = Integer.parseInt(fieldcontent);
+					if(value > 0 && value < nbPages) {
+						numPage = value;
+						initialize();
+						gotofield.setText("");
+					}
+				}
+			}
+		});
 		
 		if(numPage == 0) {
 			
-			title.setText("the british colonial empire throughout history");
-			start.getStyleClass().add("startButton");
-			
-			start.setOnAction(new EventHandler<ActionEvent>() {
-				public void handle(ActionEvent e) {
-					numPage++;
-					initialize();
-				}
-			});
+			title.setText("The british colonial empire throughout history");
 			
 			change.getChildren().add(start);
 			StackPane.setAlignment(start, Pos.BOTTOM_CENTER);
@@ -68,29 +99,51 @@ public class History extends BorderPane {
 		
 		if(numPage == 1) {
 			
+			gotobutton.getStyleClass().add("startButton");
+			
+			gotobox.getChildren().add(gotofield);
+			gotobox.getChildren().add(onpages);
+			gotobox.getChildren().add(gotobutton);
+			change.getChildren().add(gotobox);
+			
 			next.getStyleClass().add("backButton");
-
 			change.getChildren().add(next);
 			StackPane.setAlignment(next, Pos.BOTTOM_RIGHT);
+			
+			gotobox.setAlignment(Pos.CENTER);
+			StackPane.setAlignment(gotobox, Pos.BOTTOM_CENTER);
+
 
 		}
 		
 		if(numPage < nbPages && numPage > 1) {
-
+			
+			gotobox.getChildren().add(gotofield);
+			gotobox.getChildren().add(onpages);
+			gotobox.getChildren().add(gotobutton);
+			change.getChildren().add(gotobox);
+			
 			change.getChildren().add(next);
 			StackPane.setAlignment(next, Pos.BOTTOM_RIGHT);
 
 			change.getChildren().add(prev);
 			StackPane.setAlignment(prev, Pos.BOTTOM_LEFT);
-			
-
+			gotobox.setAlignment(Pos.CENTER);
+			StackPane.setAlignment(gotobox, Pos.BOTTOM_CENTER);
 		}
 		
 		
 		if(numPage == nbPages) {
-
+			
+			gotobox.getChildren().add(gotofield);
+			gotobox.getChildren().add(onpages);
+			gotobox.getChildren().add(gotobutton);
+			change.getChildren().add(gotobox);
+			
 			change.getChildren().add(prev);
 			StackPane.setAlignment(prev, Pos.BOTTOM_LEFT);
+			gotobox.setAlignment(Pos.CENTER);
+			StackPane.setAlignment(gotobox, Pos.BOTTOM_CENTER);
 			
 		}
 					
