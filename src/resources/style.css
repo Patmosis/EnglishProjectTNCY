@@ -194,3 +194,7 @@ Label {
 .example {
 	-fx-font-size: 20; 
 }
+
+.historyText {
+    -fx-font-size: 20
+}

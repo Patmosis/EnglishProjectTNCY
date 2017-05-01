@@ -46,13 +46,7 @@ public class HistoryData {
 	}
 	
 	public ArrayList<String> getByNum(int numLine) {
-		ArrayList<String> result = new ArrayList<String>();
-		for (ArrayList<String> dataLine: dataList) {
-			if (Integer.parseInt(dataLine.get(0)) == numLine) {
-				result = dataLine;
-			}
-		}
-		return result;
+		return dataList.get(numLine);
 	}
 
 }
