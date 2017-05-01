@@ -27,7 +27,7 @@ public class MainWindow {
         mainPane.getStyleClass().add("mainPane");
         // Sets default text on opening application
         mainPane.setCenter(new HomePage(menu));//(new Label("Welcome to our app!"));
-        MainScene scene = new MainScene(mainPane, 800, 600);
+        MainScene scene = new MainScene(mainPane, 1000, 700);
 
         // Sets style sheet and scene
         scene.getStylesheets().add(urlStyle);
@@ -57,10 +57,10 @@ public class MainWindow {
         this.stage.initStyle(StageStyle.UNDECORATED);
     	
     	// Only way I found to prevent resizing
-    	this.stage.setMaxWidth(800);
-    	this.stage.setMaxHeight(600);
-    	this.stage.setMinWidth(800);
-    	this.stage.setMinHeight(600);
+    	this.stage.setMaxWidth(1000);
+    	this.stage.setMaxHeight(700);
+    	this.stage.setMinWidth(1000);
+    	this.stage.setMinHeight(700);
     }
 	
 }

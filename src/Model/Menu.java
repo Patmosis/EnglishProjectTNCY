@@ -36,7 +36,7 @@ public class Menu extends GridPane {
 		gameMainStage = stage;
 		
 		// Set horizontal gap between parts of the menu
-		setHgap(320);//260
+		setHgap(520);//260
 		getStyleClass().add("mainMenu");
 		
 		// Initialize class attributes
