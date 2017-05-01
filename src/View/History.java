@@ -1,11 +1,14 @@
 package View;
 
+import Model.HistoryData;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -16,9 +19,10 @@ public class History extends BorderPane {
 	
 	private static int nbPages = 19;
 	private int numPage = 0;
-	
+	private HistoryData data;
 	
 	public History(int numPage) {
+		data = new HistoryData();
 		initialize();
 	}
 	
@@ -26,6 +30,7 @@ public class History extends BorderPane {
 	public void initialize() {
 		
 		Label title = new Label();
+		title.setText(data.getByNum(numPage).get(1));
 		
 		Label onpages = new Label();
 		onpages.setText("/" + String.valueOf(nbPages));
@@ -90,14 +95,17 @@ public class History extends BorderPane {
 		
 		if(numPage == 0) {
 			
-			title.setText("The british colonial empire throughout history");
-			
 			change.getChildren().add(start);
 			StackPane.setAlignment(start, Pos.BOTTOM_CENTER);
 		
 		}
 		
 		if(numPage == 1) {
+			
+			ImageView mapBox = new ImageView();
+			Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
+			mapBox.setImage(map);
+			content.getChildren().add(mapBox);
 			
 			gotobutton.getStyleClass().add("startButton");
 			
@@ -118,6 +126,11 @@ public class History extends BorderPane {
 		
 		if(numPage < nbPages && numPage > 1) {
 			
+			ImageView mapBox = new ImageView();
+			Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
+			mapBox.setImage(map);
+			content.getChildren().add(mapBox);
+			
 			gotobox.getChildren().add(gotofield);
 			gotobox.getChildren().add(onpages);
 			gotobox.getChildren().add(gotobutton);
@@ -134,6 +147,11 @@ public class History extends BorderPane {
 		
 		
 		if(numPage == nbPages) {
+			
+			ImageView mapBox = new ImageView();
+			Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
+			mapBox.setImage(map);
+			content.getChildren().add(mapBox);
 			
 			gotobox.getChildren().add(gotofield);
 			gotobox.getChildren().add(onpages);
