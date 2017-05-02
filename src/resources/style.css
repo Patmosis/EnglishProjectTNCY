@@ -91,6 +91,10 @@ Label {
 	-fx-padding: 20 0 0 20 ;
 }
 
+.historyTitlePane {
+	-fx-padding: 20 0 20 0 ;
+}
+
 /* History title properties */
 .historyTitle {
 	-fx-font-size: 30;
