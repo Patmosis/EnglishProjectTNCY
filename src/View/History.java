@@ -18,7 +18,7 @@ import javafx.scene.text.TextAlignment;
 
 public class History extends BorderPane {
 	
-	private static int nbPages = 19;
+	private static int nbPages = 7;
 	private int numPage = 0;
 	private HistoryData data;
 	
@@ -32,8 +32,8 @@ public class History extends BorderPane {
 		
 		Label title = new Label();
 		title.setText(data.getByNum(numPage).get(0));
+		title.getStyleClass().add("historyTitlePane");
 
-		
 		Label onpages = new Label();
 		onpages.setText("/" + String.valueOf(nbPages));
 		
@@ -86,7 +86,7 @@ public class History extends BorderPane {
 				String fieldcontent = gotofield.getText().replaceAll("[\\D]","");
 				if(!(fieldcontent.equals(""))) {
 					int value = Integer.parseInt(fieldcontent);
-					if(value > 0 && value < nbPages) {
+					if(value > 0 && value <= nbPages) {
 						numPage = value;
 						initialize();
 						gotofield.setText("");
@@ -100,7 +100,7 @@ public class History extends BorderPane {
 			ImageView mapView = new ImageView();
 			Image map = new Image("resources/images/colonization.jpg");
 			mapView.setPreserveRatio(true);
-			mapView.setFitHeight(450);
+			mapView.setFitHeight(400);
 			mapView.setImage(map);
 			content.getChildren().add(mapView);
 			
@@ -109,6 +109,7 @@ public class History extends BorderPane {
 			presentation.setWrapText(true);
 			presentation.getStyleClass().add("historyText");
 			presentation.setTextAlignment(TextAlignment.CENTER);
+			presentation.setMaxWidth(900);
 			content.getChildren().add(presentation);
 			change.getChildren().add(start);
 			StackPane.setAlignment(start, Pos.BOTTOM_CENTER);
@@ -118,11 +119,19 @@ public class History extends BorderPane {
 		if(numPage == 1) {
 			
 			ImageView mapView = new ImageView();
-			Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
+			Image map = new Image("resources/images/page1.gif");
 			mapView.setPreserveRatio(true);
-			mapView.setFitHeight(450);
+			mapView.setFitHeight(400);
 			mapView.setImage(map);
 			content.getChildren().add(mapView);
+			
+			Label presentation = new Label();
+			presentation.setText(data.getByNum(numPage).get(1));
+			presentation.setWrapText(true);
+			presentation.getStyleClass().add("historyText");
+			presentation.setTextAlignment(TextAlignment.CENTER);
+			presentation.setMaxWidth(900);
+			content.getChildren().add(presentation);
 			
 			gotobutton.getStyleClass().add("startButton");
 			
@@ -145,9 +154,17 @@ public class History extends BorderPane {
 			ImageView mapView = new ImageView();
 			Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
 			mapView.setPreserveRatio(true);
-			mapView.setFitHeight(450);
+			mapView.setFitHeight(400);
 			mapView.setImage(map);
 			content.getChildren().add(mapView);
+			
+			Label presentation = new Label();
+			presentation.setText(data.getByNum(numPage).get(1));
+			presentation.setWrapText(true);
+			presentation.getStyleClass().add("historyText");
+			presentation.setTextAlignment(TextAlignment.CENTER);
+			presentation.setMaxWidth(900);
+			content.getChildren().add(presentation);
 			
 			gotobox.getChildren().add(gotofield);
 			gotobox.getChildren().add(onpages);
@@ -167,11 +184,19 @@ public class History extends BorderPane {
 		if(numPage == nbPages) {
 			
 			ImageView mapView = new ImageView();
-			Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
+			Image map = new Image("resources/images/commonwealth.jpg");
 			mapView.setPreserveRatio(true);
-			mapView.setFitHeight(450);
+			mapView.setFitHeight(400);
 			mapView.setImage(map);
 			content.getChildren().add(mapView);
+			
+			Label presentation = new Label();
+			presentation.setText(data.getByNum(numPage).get(1));
+			presentation.setWrapText(true);
+			presentation.getStyleClass().add("historyText");
+			presentation.setTextAlignment(TextAlignment.CENTER);
+			presentation.setMaxWidth(900);
+			content.getChildren().add(presentation);
 			
 			gotobox.getChildren().add(gotofield);
 			gotobox.getChildren().add(onpages);
