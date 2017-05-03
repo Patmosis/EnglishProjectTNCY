@@ -198,6 +198,22 @@ Label {
 	-fx-text-fill: blue;
 }
 
+.summaryButton {
+	-fx-text-fill: #3333cc;
+	-fx-padding: 6;
+	-fx-background-color: transparent;
+	-fx-font-size: 13; 
+	-fx-font-weight: bold; 
+}
+
+.summaryButton:hover {
+	-fx-text-fill: #1f1f7a;
+}
+
+.summaryButton:pressed {
+	-fx-text-fill: blue;
+}
+
 .startButton {
 	-fx-text-fill: #3333cc;
 	-fx-padding: 10;

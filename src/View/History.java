@@ -32,26 +32,34 @@ public class History extends BorderPane {
 	
 	
 	public void initialize() {
-
+		
+		getChildren().removeAll();
+		
 		HBox menu = new HBox();
 		
 		ArrayList<Button> menuList = new ArrayList<Button>();
-		
-		for(int i=1; i<=nbPages;i++) {
-			int i2 = i;
-			menuList.add(new Button(Integer.toString(i2)));
-		}
+		menuList.add(new Button("🏠"));
+		menuList.get(0).getStyleClass().add("hmenuButton");
+		menu.getChildren().add(menuList.get(0));
+		menuList.get(0).setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent e) {
+				numPage = 0;
+				initialize();
+				
+			}
+		});
 		
 		for(int i=1; i<=nbPages; i++) {
 			int i2 = i;
+			menuList.add(new Button(Integer.toString(i2)));
 			if(i == numPage) {
-				menuList.get(i-1).getStyleClass().add("selectedPageButton");
+				menuList.get(i).getStyleClass().add("selectedPageButton");
 			}
 			else {
-				menuList.get(i-1).getStyleClass().add("hmenuButton");
+				menuList.get(i).getStyleClass().add("hmenuButton");
 			}
-			menu.getChildren().add(menuList.get(i-1));
-			menuList.get(i-1).setOnAction(new EventHandler<ActionEvent>() {
+			menu.getChildren().add(menuList.get(i));
+			menuList.get(i).setOnAction(new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent e) {
 					if(numPage != i2) {
 						numPage = i2;
@@ -66,11 +74,7 @@ public class History extends BorderPane {
 		Label title = new Label();
 		title.setText(data.getByNum(numPage).get(0));
 		title.getStyleClass().add("historyTitlePane");
-
-		Label onpages = new Label();
-		onpages.setText("/" + String.valueOf(nbPages));
 		
-		VBox content = new VBox(15);
 		BorderPane change = new BorderPane();
 		
 		Button prev = new Button("previous\n🢀");
@@ -82,14 +86,16 @@ public class History extends BorderPane {
 		next.getStyleClass().add("nextprevButton");
 		start.getStyleClass().add("startButton");
 		
-		getChildren().removeAll();
+		
+		
+		VBox content = new VBox(15);
 		
 		ImageView mapView = new ImageView();
 		Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
 		mapView.setPreserveRatio(true);
 		mapView.setFitHeight(400);
 		mapView.setImage(map);
-		content.getChildren().add(mapView);
+		
 		
 		Label presentation = new Label();
 		presentation.setText(data.getByNum(numPage).get(1));
@@ -97,13 +103,41 @@ public class History extends BorderPane {
 		presentation.getStyleClass().add("historyText");
 		presentation.setTextAlignment(TextAlignment.CENTER);
 		presentation.setMaxWidth(900);
-		content.getChildren().add(presentation);
+		
 		
 		if(numPage == 0) {
+			
+			HBox imAndSum = new HBox(15);
+			VBox summary = new VBox(0);
+			ArrayList<Button> summaryList = new ArrayList<Button>();
 			change.setCenter(start);
+			for(int i=1; i<=nbPages; i++) {
+				int i2 = i;
+				summaryList.add(new Button(Integer.toString(i)+". "+data.getByNum(i).get(0)));
+				summary.getChildren().add(summaryList.get(i-1));
+				summaryList.get(i-1).getStyleClass().add("summaryButton");
+				
+				summaryList.get(i-1).setOnAction(new EventHandler<ActionEvent>() {
+					public void handle(ActionEvent e) {
+						numPage = i2;
+						initialize();
+					}
+				});
+			}
+			
+			imAndSum.setAlignment(Pos.CENTER);
+			imAndSum.getChildren().add(summary);
+			imAndSum.getChildren().add(mapView);
+			
+			content.getChildren().add(imAndSum);
+			content.getChildren().add(presentation);
+			
 		}
 		
 		else {
+
+			content.getChildren().add(mapView);
+			content.getChildren().add(presentation);
 			
 			change.setCenter(menu);
 			change.setRight(next);
