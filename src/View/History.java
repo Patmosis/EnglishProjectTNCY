@@ -34,7 +34,7 @@ public class History extends BorderPane {
 	public void initialize() {
 
 		HBox menu = new HBox();
-		menu.setPadding(new Insets(1));
+		
 		ArrayList<Button> menuList = new ArrayList<Button>();
 		
 		for(int i=1; i<=nbPages;i++) {
@@ -44,14 +44,23 @@ public class History extends BorderPane {
 		
 		for(int i=1; i<=nbPages; i++) {
 			int i2 = i;
-			menuList.get(i-1).getStyleClass().add("hmenuButton");
+			if(i == numPage) {
+				menuList.get(i-1).getStyleClass().add("selectedPageButton");
+			}
+			else {
+				menuList.get(i-1).getStyleClass().add("hmenuButton");
+			}
 			menu.getChildren().add(menuList.get(i-1));
 			menuList.get(i-1).setOnAction(new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent e) {
-					numPage = i2;
-					initialize();
+					if(numPage != i2) {
+						numPage = i2;
+						initialize();
+					}
 				}
 			});
+			
+
 		}
 
 		Label title = new Label();
@@ -65,14 +74,60 @@ public class History extends BorderPane {
 		BorderPane change = new BorderPane();
 		
 		Button prev = new Button("previous\n🢀");
-		Button next = new Button("next\n    🢂");
+		Button next = new Button("       next\n           🢂");
 		Button start = new Button("start");
+		
 		
 		prev.getStyleClass().add("nextprevButton");
 		next.getStyleClass().add("nextprevButton");
 		start.getStyleClass().add("startButton");
 		
 		getChildren().removeAll();
+		
+		ImageView mapView = new ImageView();
+		Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
+		mapView.setPreserveRatio(true);
+		mapView.setFitHeight(400);
+		mapView.setImage(map);
+		content.getChildren().add(mapView);
+		
+		Label presentation = new Label();
+		presentation.setText(data.getByNum(numPage).get(1));
+		presentation.setWrapText(true);
+		presentation.getStyleClass().add("historyText");
+		presentation.setTextAlignment(TextAlignment.CENTER);
+		presentation.setMaxWidth(900);
+		content.getChildren().add(presentation);
+		
+		if(numPage == 0) {
+			change.setCenter(start);
+		}
+		
+		else {
+			
+			change.setCenter(menu);
+			change.setRight(next);
+			change.setLeft(prev);
+			
+			if(numPage == 1) {
+				prev.setVisible(false);
+			}
+			
+			if(numPage == nbPages) {
+				next.setVisible(false);
+			}
+			
+		}
+		
+		menu.setAlignment(Pos.CENTER);
+		content.setAlignment(Pos.CENTER);
+		title.setMaxWidth(Double.MAX_VALUE);
+		title.setAlignment(Pos.CENTER);
+		
+		setTop(title);
+		setCenter(content);
+		setBottom(change);
+		
 		
 		prev.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
@@ -94,116 +149,6 @@ public class History extends BorderPane {
 				initialize();
 			}
 		});
-
-		
-		if(numPage == 0) {
-			
-			ImageView mapView = new ImageView();
-			Image map = new Image("resources/images/colonization.jpg");
-			mapView.setPreserveRatio(true);
-			mapView.setFitHeight(400);
-			mapView.setImage(map);
-			content.getChildren().add(mapView);
-			
-			Label presentation = new Label();
-			presentation.setText(data.getByNum(numPage).get(1));
-			presentation.setWrapText(true);
-			presentation.getStyleClass().add("historyText");
-			presentation.setTextAlignment(TextAlignment.CENTER);
-			presentation.setMaxWidth(900);
-			content.getChildren().add(presentation);
-			change.setCenter(start);
-			
-		
-		}
-		
-		if(numPage == 1) {
-			
-			ImageView mapView = new ImageView();
-			Image map = new Image("resources/images/page1.gif");
-			mapView.setPreserveRatio(true);
-			mapView.setFitHeight(400);
-			mapView.setImage(map);
-			content.getChildren().add(mapView);
-			
-			Label presentation = new Label();
-			presentation.setText(data.getByNum(numPage).get(1));
-			presentation.setWrapText(true);
-			presentation.getStyleClass().add("historyText");
-			presentation.setTextAlignment(TextAlignment.CENTER);
-			presentation.setMaxWidth(900);
-			content.getChildren().add(presentation);
-			next.getStyleClass().add("backButton");
-			
-			change.setCenter(menu);
-			change.setRight(next);
-			
-			menu.setAlignment(Pos.CENTER);
-			next.setAlignment(Pos.CENTER_RIGHT);
-			
-		}
-		
-		if(numPage < nbPages && numPage > 1) {
-			
-			ImageView mapView = new ImageView();
-			Image map = new Image("resources/images/worldmap"+Integer.toString(numPage)+".jpg");
-			mapView.setPreserveRatio(true);
-			mapView.setFitHeight(400);
-			mapView.setImage(map);
-			content.getChildren().add(mapView);
-			
-			Label presentation = new Label();
-			presentation.setText(data.getByNum(numPage).get(1));
-			presentation.setWrapText(true);
-			presentation.getStyleClass().add("historyText");
-			presentation.setTextAlignment(TextAlignment.CENTER);
-			presentation.setMaxWidth(900);
-			content.getChildren().add(presentation);
-			
-			change.setCenter(menu);
-			change.setRight(next);
-			change.setLeft(prev);
-			
-			prev.setAlignment(Pos.CENTER_LEFT);
-			menu.setAlignment(Pos.CENTER);
-			next.setAlignment(Pos.CENTER_RIGHT);
-		}
-		
-		
-		if(numPage == nbPages) {
-			
-			ImageView mapView = new ImageView();
-			Image map = new Image("resources/images/commonwealth.jpg");
-			mapView.setPreserveRatio(true);
-			mapView.setFitHeight(400);
-			mapView.setImage(map);
-			content.getChildren().add(mapView);
-			
-			Label presentation = new Label();
-			presentation.setText(data.getByNum(numPage).get(1));
-			presentation.setWrapText(true);
-			presentation.getStyleClass().add("historyText");
-			presentation.setTextAlignment(TextAlignment.CENTER);
-			presentation.setMaxWidth(900);
-			content.getChildren().add(presentation);
-
-			change.setCenter(menu);
-			change.setLeft(prev);
-			
-			prev.setAlignment(Pos.CENTER_LEFT);
-			menu.setAlignment(Pos.CENTER);
-			
-		}
-		
-		menu.setAlignment(Pos.CENTER);
-		content.setAlignment(Pos.CENTER);
-		title.setMaxWidth(Double.MAX_VALUE);
-		title.setAlignment(Pos.CENTER);
-		
-		setTop(title);
-		setCenter(content);
-		setBottom(change);
-		
 	}
 	
 }
