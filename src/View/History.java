@@ -18,7 +18,7 @@ import javafx.scene.text.TextAlignment;
 
 public class History extends BorderPane {
 	
-	private static int nbPages = 7;
+	private static int nbPages = 11;
 	private int numPage = 0;
 	private HistoryData data;
 	
@@ -43,19 +43,11 @@ public class History extends BorderPane {
 		Button prev = new Button("previous\n🢀");
 		Button next = new Button("next\n    🢂");
 		Button start = new Button("start");
-		HBox gotobox = new HBox();
 		
-		final TextField gotofield = new TextField();
-		gotofield.setMinHeight(5);
-		gotofield.setMinWidth(5);
-		gotofield.setPrefSize(50,35);
-		gotofield.setFont(new Font(18));
-		Button gotobutton = new Button();
-		gotobutton.setText("go!");
+		Label numPageLabel = new Label(Integer.toString(numPage)+"/"+Integer.toString(nbPages));
 		
 		prev.getStyleClass().add("nextprevButton");
 		next.getStyleClass().add("nextprevButton");
-		gotobutton.getStyleClass().add("startButton");
 		start.getStyleClass().add("startButton");
 		
 		getChildren().removeAll();
@@ -80,20 +72,7 @@ public class History extends BorderPane {
 				initialize();
 			}
 		});
-		
-		gotobutton.setOnAction(new EventHandler<ActionEvent>() {
-			public void handle(ActionEvent e) {
-				String fieldcontent = gotofield.getText().replaceAll("[\\D]","");
-				if(!(fieldcontent.equals(""))) {
-					int value = Integer.parseInt(fieldcontent);
-					if(value > 0 && value <= nbPages) {
-						numPage = value;
-						initialize();
-						gotofield.setText("");
-					}
-				}
-			}
-		});
+
 		
 		if(numPage == 0) {
 			
@@ -133,19 +112,11 @@ public class History extends BorderPane {
 			presentation.setMaxWidth(900);
 			content.getChildren().add(presentation);
 			
-			gotobutton.getStyleClass().add("startButton");
-			
-			gotobox.getChildren().add(gotofield);
-			gotobox.getChildren().add(onpages);
-			gotobox.getChildren().add(gotobutton);
-			change.getChildren().add(gotobox);
-			
 			next.getStyleClass().add("backButton");
 			change.getChildren().add(next);
+			change.getChildren().add(numPageLabel);
 			StackPane.setAlignment(next, Pos.BOTTOM_RIGHT);
-			
-			gotobox.setAlignment(Pos.CENTER);
-			StackPane.setAlignment(gotobox, Pos.BOTTOM_CENTER);
+			StackPane.setAlignment(numPageLabel, Pos.BOTTOM_CENTER);
 
 		}
 		
@@ -166,18 +137,13 @@ public class History extends BorderPane {
 			presentation.setMaxWidth(900);
 			content.getChildren().add(presentation);
 			
-			gotobox.getChildren().add(gotofield);
-			gotobox.getChildren().add(onpages);
-			gotobox.getChildren().add(gotobutton);
-			change.getChildren().add(gotobox);
-			
 			change.getChildren().add(next);
 			StackPane.setAlignment(next, Pos.BOTTOM_RIGHT);
-
+				
+			change.getChildren().add(numPageLabel);
 			change.getChildren().add(prev);
 			StackPane.setAlignment(prev, Pos.BOTTOM_LEFT);
-			gotobox.setAlignment(Pos.CENTER);
-			StackPane.setAlignment(gotobox, Pos.BOTTOM_CENTER);
+			StackPane.setAlignment(numPageLabel, Pos.BOTTOM_CENTER);
 		}
 		
 		
@@ -197,16 +163,10 @@ public class History extends BorderPane {
 			presentation.setTextAlignment(TextAlignment.CENTER);
 			presentation.setMaxWidth(900);
 			content.getChildren().add(presentation);
-			
-			gotobox.getChildren().add(gotofield);
-			gotobox.getChildren().add(onpages);
-			gotobox.getChildren().add(gotobutton);
-			change.getChildren().add(gotobox);
-			
+			change.getChildren().add(numPageLabel);
 			change.getChildren().add(prev);
 			StackPane.setAlignment(prev, Pos.BOTTOM_LEFT);
-			gotobox.setAlignment(Pos.CENTER);
-			StackPane.setAlignment(gotobox, Pos.BOTTOM_CENTER);
+			StackPane.setAlignment(numPageLabel, Pos.BOTTOM_CENTER);
 			
 		}
 		
