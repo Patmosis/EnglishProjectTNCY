@@ -18,7 +18,7 @@ import javafx.scene.text.TextAlignment;
 
 public class History extends BorderPane {
 	
-	private static int nbPages = 11;
+	private static int nbPages = 13;
 	private int numPage = 0;
 	private HistoryData data;
 	
