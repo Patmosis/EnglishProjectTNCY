@@ -182,6 +182,21 @@ Label {
 	-fx-text-fill: blue;
 }
 
+.hmenuButton {
+	-fx-text-fill: #3333cc;
+	-fx-padding: 10;
+	-fx-background-color: transparent;
+	-fx-font-size: 20; 
+	-fx-font-weight: bold; 
+}
+
+.hmenuButton:hover {
+	-fx-text-fill: #1f1f7a;
+}
+
+.hmenuButton:pressed {
+	-fx-text-fill: blue;
+}
 
 .startButton {
 	-fx-text-fill: #3333cc;
