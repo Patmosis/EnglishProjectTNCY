@@ -19,7 +19,7 @@ public class HomePage extends BorderPane {
 	
 	public HomePage(final Menu menu) {
 		// Title of the application
-		Text title = new Text("Words and the world");// Around the world
+		Text title = new Text("Words and the World");// Around the world
 		title.setFont(Font.loadFont("file:src/resources/fonts/Precious.ttf", 60));
 		title.setFill(Color.color(0, 0, 0.25));
 		title.setTranslateY(50);

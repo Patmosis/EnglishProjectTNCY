@@ -110,7 +110,7 @@ Label {
 
 /* Map buttons */
 .mapButton {
-	-fx-text-fill: #161046;/*#3333cc;*/
+	-fx-text-fill: #af0000;/*161046;/*#3333cc;*/
 	-fx-padding: 10;
 	-fx-background-color: transparent;
 	-fx-font-size: 15; 
@@ -118,11 +118,11 @@ Label {
 }
 
 .mapButton:hover {
-	-fx-text-fill: #1f1f7a;
+	-fx-text-fill: #ff0505;/*#1f1f7a;*/
 }
 
 .mapButton:pressed {
-	-fx-text-fill: blue;
+	-fx-text-fill: #cc0000;/*blue;*/
 }
 
 /* Answer buttons */
